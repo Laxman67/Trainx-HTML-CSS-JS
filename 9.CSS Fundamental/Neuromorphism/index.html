@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #e3dfdf;
+      }
+
+      .profile-container {
+        width: 300px;
+        height: 400px;
+        background-color: #e4e4e4;
+        border-radius: 20px;
+        box-shadow:
+          -3px -3px 6px white,
+          3px 3px 6px gray;
+        /* box-sizing: border-box; */
+        padding: 20px;
+      }
+      #top-section .fa-arrow-left {
+        margin-right: 80%;
+      }
+      .profile-image img {
+        width: 80%;
+        border-radius: 50%;
+        margin-left: 20px;
+        mix-blend-mode: multiply;
+        box-shadow:
+          -5px -5px 10px rgb(255, 255, 255),
+          3px 3px 6px gray;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid rgb(240, 235, 235);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://fontawesome.com/ -->
+    <article class="profile-container">
+      <section id="top-section" style="color: gray">
+        <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </section>
+
+      <figure class="profile-image">
+        <img
+          src="https://cdn.pixabay.com/photo/2024/02/02/04/20/ai-generated-8547222_1280.png"
+          alt="Coding Nepal profile image"
+        />
+      </figure>
+
+      <section class="title">
+        <h3>Coding Nepal</h3>
+        <p>Designer & Developer</p>
+      </section>
+      <section id="icons">
+        <i class="fa-brands fa-facebook-f" style="color: blue"></i>
+      </section>
+      <section class="btns"></section>
+      <section class="actions"></section>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#page1,
+#page2,
+#page3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#box {
+  height: 300px;
+  width: 300px;
+  background-color: aqua;
+}
+
+#page1 {
+  background-color: lightskyblue;
+}
+#page2 {
+  background-color: crimson;
+}
+#page3 {
+  background-color: cadetblue;
+}

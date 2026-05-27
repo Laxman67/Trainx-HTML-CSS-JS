@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms in HTML</title>
+
+    <style>
+      input {
+        outline: none;
+        border: none;
+        border-bottom: 2px dotted;
+      }
+
+      input[name='fname'] {
+        background-color: rgb(206, 198, 198);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Sports Physical Form</h2>
+
+    <form action="actionPage.html" method="get">
+      <fieldset>
+        <legend>Athlete Information</legend>
+
+        <ul>
+          <li>
+            <label for="fname">First Name:</label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Enter your name..."
+              required
+            />
+          </li>
+          <li>
+            <label for="school_team">School/Team:</label>
+            <input
+              type="text"
+              id="school_team"
+              name="school_team"
+              placeholder="Enter your school or Team"
+              value="Parul University"
+              readonly
+            />
+          </li>
+          <li>
+            <label for="sports">Sports:</label>
+            <input
+              type="text"
+              id="sports"
+              name="sport"
+              placeholder="Sports..."
+              required
+            />
+          </li>
+          <li>
+            <label for="parent_guardian">Parent/ Guardian Name:</label>
+            <input
+              type="text"
+              id="parent_guardian"
+              name="parent_guardian"
+              placeholder="Parent or Guardian.."
+              required
+            />
+          </li>
+
+          <li>
+            <label for="contact">Contact Number:</label>
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="Example: +91 525252521"
+              required
+            />
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Medical History for Athlete</legend>
+
+        <ul>
+          <li>
+            History Of Concussions:
+            <input
+              type="radio"
+              name="concussions"
+              id="concussions-yes"
+              value="concussions-yes"
+              readonly
+            />
+            <label for="concussions-yes">Yes</label>
+            <input
+              type="radio"
+              name="concussions"
+              id="concussions-no"
+              value="concussions-no"
+              required
+            />
+            <label for="concussions-no">No</label>
+          </li>
+          <li>
+            <label for="previous_surgeries"> Previous Surgeries:</label>
+
+            <input
+              type="text"
+              name="previous_surgeries"
+              id="previous_surgeries"
+              required
+            />
+          </li>
+          <li>
+            Any bone Fractures?
+            <input
+              type="radio"
+              name="fractures"
+              id="fractures-yes"
+              required
+              value="fracture-yes"
+            />
+            <label for="fractures-yes">Yes</label>
+            <input
+              type="radio"
+              name="fractures"
+              id="fractures-no"
+              value="fracture-no"
+              required
+            />
+            <label for="fractures-no">No</label>
+          </li>
+
+          <li>
+            Asthma or breathing problems:
+            <input
+              type="radio"
+              id="asthma-yes"
+              name="asthma"
+              value="asthma-yes"
+              required
+            />
+            <label for="asthma-yes">Yes</label>
+            <input
+              type="radio"
+              id="asthma-no"
+              name="asthma"
+              value="asthma-no"
+              required
+            />
+            <label for="asthma-no">No</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Date/Time</legend>
+
+        <ul>
+          <li>
+            <label for="dob"> DOB</label>
+            <input type="date" name="dob" id="dob" required />
+          </li>
+          <li>
+            <label for="time"> Time</label>
+            <input type="time" name="time" id="time" required />
+          </li>
+          <li>
+            <label for="date-time"> Time</label>
+            <input
+              type="datetime-local"
+              name="date-time"
+              id="date-time"
+              required
+            />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Textarea</legend>
+        <ul>
+          <li>
+            <p>
+              <label for="summary-1">Summary Of your last Operations:</label>
+            </p>
+            <textarea
+              name=""
+              id="summary-1"
+              rows="7"
+              cols="50"
+              placeholder="enter your summary"
+            ></textarea>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>File Input</legend>
+
+        <label for="file">Drop your last Medical Report:</label>
+        <input type="file" name="" id="file" accept=".pdf" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Checkbox/Select/Number</legend>
+
+        <ul>
+          <li>
+            <input
+              type="checkbox"
+              name="terms-conditions"
+              id="checkbox"
+              required
+              value="yes-terms-conditions"
+            />
+
+            <label for="checkbox">You've read those Terms and Conditions</label>
+          </li>
+          <li>
+            <input
+              type="checkbox"
+              name="pathlabsReport"
+              id="pathlabsReport"
+              required
+              value="yes-pathlabsReport"
+            />
+
+            <label for="pathlabsReport">Is your reports from Pathlabs</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Number Input</legend>
+        <label for="digit">Percentage of HB in body?</label>
+        <input type="number" name="hb-ratio" id="digit" />
+      </fieldset>
+
+      <!-- Select -->
+      <!-- Range -->
+
+      <fieldset>
+        <legend>Select</legend>
+        <label for="states">Select your state:</label>
+
+        <select name="states" id="states">
+          <option value="null">--Select Your State</option>
+          <option value="maharashtra">Maharashtra</option>
+          <option value="punjab">punjab</option>
+          <option value="mumbai">mumbai</option>
+          <option value="gujrat">gujrat</option>
+          <option value="chandigarh">chandigarh</option>
+          <option value="uttarpradesh">uttarpradesh</option>
+          <option value="uttrakhand">uttrakhand</option>
+          <option value="Chennai">Chennai</option>
+        </select>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <label for="range"></label>
+        <input
+          type="range"
+          name="range"
+          id="range"
+          min="0"
+          max="10"
+          value="6"
+        />
+      </fieldset>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+=============CSS FUNDAMENTALS===================
+
+0. Ways to Add CSS: Inline, Internal, and External
+
+1 . Selectors in CSS
+Image: image.png
+
+Id Selectors
+Class Selectors
+Name Selector
+Group Selectors
+Descendant Selectors
+attributes Selectors
+
+  /* Class */
+      /* Id */
+      /* Type Selector */
+      /* Group Selector */
+      /* Descendant Selector */
+      /* Child Selector */
+
+
+
+2. Properties in CSS
+property_name=value
+
+Common CSS Properties
+
+Text	color, font-size, font-family, text-align, line-height
+Background	background-color, background-image, background-size, background-repeat
+Box Model	width, height, margin, padding, border
+Positioning	position, top, left, right, bottom, z-index
+Flexbox/Grid	display, flex-direction, justify-content, align-items, grid-template-columns
+Effects	box-shadow, opacity, transform, transition
+
+
+3.Colors, Fonts, and Text Styling Basics
+
+a. Colors:
+Colors can also be specified using RGB and HEX values. For example, the color "Tomato" can be represented as rgb(255, 99, 71) or #ff6347.
+
+example 1: colorname ->  Tomato , Blue , red
+example 2: rgb ->  rgb(117, 111, 110)
+example 3: hex ->  #1edc9d.
+
+b. Fonts:
+Text
+Font Weight
+Font Family
+Font Style
+Google Font : https://fonts.google.com/
+
+
+c. Text Styling
+color,
+text-align
+,font-style
+,text-decoration
+,text-transform
+line-height
+,letter-spacing
+,spacing,
+text-shadow
+
+================================== CSS UNITS ====================
+4. CSS Units
+
+(1.) px (Pixels) : A FIXED unit of measurement.
+
+Note:
+1px = one pixel on the screen (roughly a tiny dot).
+
+
+.box {
+  width: 300px;
+  height: 100px;
+}
+
+Width → always 300px
+Height → always 100px
+
+
+---------------------------------------------
+
+(2.) % (Percentage)
+Takes a percentage of its PARENT element.
+
+example:
+<div class="parent">
+  <div class="child"></div>
+</div>
+
+
+
+.parent{
+   width:400px;
+}
+
+.child{
+   width:50%;
+}
+
+
+-----------------------------
+
+(3). em : Relative to the font-size of its PARENT Element.
+
+Example:
+.parent {
+  font-size: 20px;
+}
+
+.child {
+  font-size: 2em;
+}
+
+Calculation: 2 × 20px = 40px
+
+
+----------------------------------------
+
+(4). rem : Relative to the ROOT (HTML) font-size
+---------------------------------------------------
+
+
+(5). vh (Viewport Height) : Percentage of browser height.
+
+Example:
+.hero {
+  height: 100vh;
+}
+
+
+(6). vw (Viewport Width) :Percentage of browser width.
+
+Example:
+.banner {
+  width: 50vw;
+}
+
+
+================
+BOX SIZING
+The CSS box-sizing property defines how to calculate the width and height of an element:
+should the calculation include padding and borders, or not.
+
+
+Default Behaviour:
+
+{
+  box-sizing:content-box
+}
+
+200 + 40 + 40 = 280
+
+
+200 + 40 + 40  = 280
+
+
+The `box-sizing` property solves this problem.
+
+{
+  box-sizing: border-box
+}
+
+120+ 40 + 40 = 200
+----------------------Display Properties (Basics) --------------------------------------------------------------
+
+
+#  Block : It starts on a new line, and takes up the whole width
+==================================
+Common examples of block elements:
+==================================
+<div>
+<p>
+<h1> to <h6>
+<section>
+<article>
+<header>, <footer>
+<ul>, <ol>, <li>
+
+--------------------------------------------------------------------------------------------------------
+#  Inline : It takes only required with and Any height and width properties will have no effect.
+
+==================================
+Common examples of Inline elements:
+==================================
+
+<span> — generic inline container for text or other inline elements.
+<a> — hyperlink.
+<strong> / <b> — bold text.
+<em> / <i> — italic text.
+<img> — image.
+<label> — label for form elements.
+
+--------------------------------------------------------------------------------------------------------
+
+
+#  Inline-Block : The element itself is formatted as an inline element, but you can apply height and width values
+
+
+
+===================================== POSITION PROPERTY * =======================
+We can change the display property based on the requirement
+
+
+Position:
+
+1. Static : By DEFAULT all elements are statically positioned, top , left , right are NOT applied.
+
+2. Relative :  relative to its normal position
+
+3. absolute : positioned based on the nearest NON-STATIC  positioned parent element
+
+4. fixed :  take the fixed position of the html element
+
+5. sticky : stick to the defined position using top,left,bottom
+
+
+Project: Product Card Example - Image

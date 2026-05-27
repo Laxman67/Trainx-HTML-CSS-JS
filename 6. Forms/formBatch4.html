@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      input {
+        /* width: 20%; */
+        border: none;
+        outline: none;
+        border-bottom: 2px dotted;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Sports Physical Form</h2>
+
+    <form action="actionPage.html" method="get">
+      <fieldset>
+        <legend>Athlete Information</legend>
+
+        <ul>
+          <li>
+            <label for="fname">Name:</label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Enter your fullName.."
+            />
+          </li>
+          <li>
+            <label for="school_team">School/Team:</label>
+            <input
+              type="text"
+              id="school_team"
+              name="school_team"
+              placeholder="Team Name..."
+            />
+          </li>
+          <li>
+            <label for="sports">Sports:</label>
+            <input
+              type="text"
+              id="sports"
+              name="sports"
+              placeholder="Team Name..."
+            />
+          </li>
+          <li>
+            <label for="parent_guardian">Parent/Guardian Name:</label>
+            <input
+              type="text"
+              id="parent_guardian"
+              name="parent_guardian"
+              placeholder="parent/guardian.."
+            />
+          </li>
+          <li>
+            <label for="contact">Contact:</label>
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="+91 52525252"
+            />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Medical History for Athletes</legend>
+
+        <ul>
+          <li>
+            History of Concussions:
+            <input
+              type="radio"
+              name="concussions"
+              id="concussions-yes"
+              value="concussions-yes"
+            />
+            <label for="concussions-yes">Yes</label>
+            <input
+              type="radio"
+              name="concussions"
+              id="concussions-no"
+              value="concussions-no"
+            />
+            <label for="concussions-no">No</label>
+          </li>
+          <li>
+            Any bone Fracture:
+            <input
+              type="radio"
+              name="fracture"
+              id="fracture-yes"
+              value="fracture-yes"
+            />
+            <label for="fracture-yes">Yes</label>
+            <input
+              type="radio"
+              name="fracture"
+              id="fracture-no"
+              value="fracture-no"
+            />
+            <label for="fracture-no">No</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Fitness Assessment</legend>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

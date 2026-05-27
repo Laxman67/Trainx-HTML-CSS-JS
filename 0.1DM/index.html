@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div id="container">
+      <button type="submit">Submit</button>
+    </div>
+
+    <script>
+      // This is event bubbling
+      let btn = document.getElementById('container');
+      btn.addEventListener('click', function displayMsg() {
+        console.log(this.id);
+        console.log('Button Clicked');
+      });
+
+      btn.onclick = null;
+
+      // btn.onclick = function displayMsg() {
+      //   console.log(this.id);
+      //   console.log('Button Clicked');
+      // };
+    </script>
+  </body>
+</html>

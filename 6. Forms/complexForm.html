@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms in html</title>
+  </head>
+  <body>
+    <form>
+      <div align="center">
+        <h1>Application for Employment</h1>
+        <p>[Parish/School Location]</p>
+        <p>
+          <strong
+            >THIS APPLICATION MUST BE SIGNED AND DATED TO BE A VALID
+            APPLICATION</strong
+          >
+        </p>
+      </div>
+
+      <!-- Example 1 -->
+      <table
+        border="1"
+        width="100%"
+        cellpadding="3"
+        style="border-collapse: collapse; margin-bottom: 20px"
+      >
+        <tr bgcolor="#e0e0e0">
+          <th colspan="2" align="left">Please Print</th>
+        </tr>
+        <tr>
+          <td width="40%" height="60" valign="top">
+            <strong>Type of Work Desired</strong>
+          </td>
+          <td width="60%" rowspan="3" valign="top">
+            Have you previously been employed by any entity in the Diocese of
+            Kansas City-St. Joseph?
+            <input type="checkbox" /> Yes <input type="checkbox" /> No
+            <br /><br />
+            If yes, when?
+            <br /><br /><br />
+            Do you have any relatives employed by any entity in the Diocese of
+            Kansas City-St. Joseph?<br />
+            <input type="checkbox" /> Yes <input type="checkbox" /> No
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td
+                  width="50%"
+                  valign="top"
+                  style="border-right: 1px solid black"
+                >
+                  <strong>Date Available for Employment?</strong>
+                </td>
+                <td width="50%" valign="top" style="padding-left: 10px">
+                  <strong>Employment Interest</strong><br />
+                  <input type="checkbox" /> Full Time<br />
+                  <input type="checkbox" /> Part Time
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="60" valign="top">
+            <strong>Are there any days or hours you are not available?</strong>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" valign="top">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td>
+                  Can you provide proof that you are legally eligible for
+                  employment in the United States of America?
+                </td>
+                <td align="right">
+                  <input type="checkbox" /> Yes <input type="checkbox" /> No
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- Example 2 -->
+
+      <table
+        border="1"
+        width="100%"
+        cellpadding="8"
+        cellspacing="0"
+        style="border-collapse: collapse; margin-bottom: 20px"
+      >
+        <tr bgcolor="#e0e0e0">
+          <th colspan="4" align="left">Personal</th>
+        </tr>
+        <tr>
+          <td colspan="4" height="50" valign="top">
+            <strong>Name:</strong>
+            <table
+              width="100%"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              style="font-size: 10px; color: #555; margin-top: 15px"
+            >
+              <tr>
+                <td width="25%">First</td>
+                <td width="25%">Middle</td>
+                <td width="25%">Last</td>
+                <td width="25%">Other Last Names Used</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" height="50" valign="top">
+            <strong>Address:</strong>
+            <table
+              width="100%"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              style="font-size: 10px; color: #555; margin-top: 15px"
+            >
+              <tr>
+                <td width="15%">Number</td>
+                <td width="30%">Street</td>
+                <td width="25%">City</td>
+                <td width="15%">State</td>
+                <td width="15%">Zip Code</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td width="35%" height="40" valign="top">
+            <strong>Telephone Number (include Area Code)</strong>
+          </td>
+          <td colspan="3" valign="top">
+            <strong>Are you 18 years of age or older?</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" /> Yes &nbsp;&nbsp;
+            <input type="checkbox" /> No
+          </td>
+        </tr>
+        <tr>
+          <td height="40" valign="top">
+            <strong>Alternate Telephone Number</strong>
+          </td>
+          <td colspan="3" valign="top">
+            <strong>Email Address</strong>
+          </td>
+        </tr>
+      </table>
+
+      <table
+        border="1"
+        width="100%"
+        cellpadding="8"
+        cellspacing="0"
+        style="border-collapse: collapse; margin-bottom: 20px"
+      >
+        <tr bgcolor="#e0e0e0">
+          <th colspan="4" align="left">Education</th>
+        </tr>
+        <tr align="left">
+          <th width="35%">School Name & Location</th>
+          <th width="15%">Graduated</th>
+          <th width="40%">Major</th>
+          <th width="10%">GPA</th>
+        </tr>
+        <tr>
+          <td height="40"><strong>High School</strong></td>
+          <td>
+            <input type="checkbox" /> Yes<br />
+            <input type="checkbox" /> No
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td height="40"><strong>College</strong></td>
+          <td>
+            <input type="checkbox" /> Yes<br />
+            <input type="checkbox" /> No
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td height="40"><strong>Graduate School</strong></td>
+          <td>
+            <input type="checkbox" /> Yes<br />
+            <input type="checkbox" /> No
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td height="40"><strong>Other</strong></td>
+          <td>
+            <input type="checkbox" /> Yes<br />
+            <input type="checkbox" /> No
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <table
+        border="1"
+        width="100%"
+        cellpadding="8"
+        cellspacing="0"
+        style="border-collapse: collapse; margin-bottom: 20px"
+      >
+        <tr bgcolor="#e0e0e0">
+          <th colspan="2" align="left">Source</th>
+        </tr>
+        <tr>
+          <td width="25%" valign="middle">
+            <strong>Source of Referral</strong>
+          </td>
+          <td width="75%">
+            <table width="100%" border="0" cellpadding="5" cellspacing="0">
+              <tr>
+                <td width="33%">
+                  <input type="checkbox" /> College / University
+                </td>
+                <td width="33%">
+                  <input type="checkbox" /> Organization / Agency
+                </td>
+                <td width="33%"><input type="checkbox" /> Internet</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /> Diocese Employee</td>
+                <td><input type="checkbox" /> Newspaper or Print</td>
+                <td><input type="checkbox" /> Job Fair</td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <table
+                    width="100%"
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                  >
+                    <tr>
+                      <td width="33%"><input type="checkbox" /> Job Club</td>
+                      <td width="25%">
+                        <input type="checkbox" /> Other (specify)
+                      </td>
+                      <td style="border-bottom: 1px solid black">&nbsp;</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+      <table
+        width="100%"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        style="font-weight: bold; font-size: 12px; margin-top: 20px"
+      >
+        <tr>
+          <td>REV. 09/2019</td>
+          <td align="right">Page 1 of 3</td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

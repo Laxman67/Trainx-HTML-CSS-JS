@@ -1,0 +1,9 @@
+What is List ? : List of Items, Resources that needs to be maintain in List
+
+What is UseCase?   :  To order those item, in structured List
+
+Types of List in HTML
+
+1. Ordered List
+2. UnOrdered List
+

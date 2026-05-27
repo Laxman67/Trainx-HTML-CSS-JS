@@ -1,0 +1,191 @@
+****************15-05-2026****************
+
+Recap
+------------------------------------------
+Semantics Elements - > Its three importance
+Id and Class : To select elements
+
+What is Div - > TO group related content
+
+Link: Using id to create links (HOW , When) -->
+Demonstration with Project
+
+Example: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe
+Project - > About Page
+-------------------------------------
+
+
+****************16-05-2026****************
+
+-------NEW TOPIC--------------------
+
+Today's Topic ( Concept + Practical Optimization ) -->
+Our About Page
+
+
+Semantic HTML Basics  (Deep Dive Its Importance
+( What , Why , Where, How ))
+
+Example Of Semantic Elements:
+
+
+---------------------------------------------------------------------------------------------
+<header>: Top section of a webpage or section. Eg. Logo, Navigation,Intro content
+---------------------------------------------------------------------------------------------
+<nav> : Used for navigation links/menu
+---------------------------------------------------------------------------------------------
+<main>: Contains the main content of the webpage.There should usually be only one <main> element.
+---------------------------------------------------------------------------------------------
+<section>: Grouped section of related content.
+<article>: Represents independent content that can stand alone.
+            Eg. News Article, Blog post, comments, or product reviews
+---------------------------------------------------------------------------------------------
+<aside> : Contains side content related to the main content. | link: https://timesofindia.indiatimes.com/
+---------------------------------------------------------------------------------------------
+<details> : Creates a expandable/collapsible content
+
+############ Example START ####################
+
+How it works
+<summary> → The visible clickable title
+<p> → Content shown when expanded
+
+<details>
+  <summary>What is HTML</summary>
+  <p>HTML stands for HyperText Markup Language.</p>
+</details>
+
+<details>
+  <summary>What is CSS</summary>
+  <p>CSS stands for Cascading Style Sheets.</p>
+</details>
+
+<details>
+  <summary>What is JavaScript</summary>
+  <p>JavaScript is a programming language used to make web pages interactive.</p>
+</details>
+
+############ Example END ####################
+
+---------------------------------------------------------------------------------------------
+<figcaption> : Adds a caption/description to a figure
+
+############ Example START ####################
+
+How it works
+<summary> → The visible clickable title
+<p> → Content shown when expanded
+
+      <figure>
+      <img
+        src="https://static.toiimg.com/thumb/131129800.jpg?photoid=131129800&imgsize=121194&width=600&resizemode=4"
+        alt="Nature"
+      />
+      <figcaption>Beautiful Nature View</figcaption>
+      </figure>
+
+############ Example END ####################
+---------------------------------------------------------------------------------------------
+<figure> : Refer to <figcaption>
+---------------------------------------------------------------------------------------------
+<footer>: Represents the bottom section of a webpage or section.
+Eg. Usually contains:
+
+Copyright
+Contact info
+Social links
+---------------------------------------------------------------------------------------------
+<mark> : Highlights text.
+Eg.
+<p>HTML is very <mark>important</mark> for web development.</p>
+---------------------------------------------------------------------------------------------
+<summary>: refer to <details>
+---------------------------------------------------------------------------------------------
+<time>: used to display time, Not used usually
+Eg. <p>Class starts at <time>10:00 AM</time></p>
+    <time datetime="2026-05-16">May 16, 2026</time>
+---------------------------------------------------------------------------------------------
+
+<iframe> : The <iframe> tag is used to embed another webpage,
+            video, map, or document inside your webpage.
+
+
+Example 1: Youtube
+
+############ Example START ####################
+  <iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/tgbNymZ7vqY"
+  title="YouTube video"
+>
+</iframe>
+############ Example END ####################
+
+
+
+Example 2: Google  Maps
+############ Example START ####################
+
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18..."
+  width="600"
+  height="450">
+</iframe>
+
+############ Example END ####################
+
+
+
+Example 3: HTML Page
+############ Example START ####################
+
+<iframe src="page1.html" width="500" height="200"></iframe>
+
+############ Example END ####################
+
+
+
+Example 4:PDFs
+############ Example START ####################
+
+<iframe
+  src="resume.pdf"
+  width="100%"
+  height="600">
+</iframe>
+
+############ Example END ####################
+
+
+
+
+
+Best Practices of HTML and Semantic HTML
+
+Good HTML is:
+
+Clean
+Readable
+Accessible
+SEO-friendly
+Easy to maintain
+
+
+
+
+
+Ref:   https://www.w3schools.com/html/html5_semantic_elements.asp
+
+Image for Semantic Ref :
+
+https://static.semrush.com/blog/uploads/media/62/de/62de85ae40932e6d41e2966b3af3ca8e/semantic-html5-markup-related-aside-kalicube.png
+
+ https://kalicube.com/learning-spaces/faq-list/seo-glossary/html5-semantic-tags-what-are-they/
+
+
+Emphasize semantic HTML and accessibility. ?
+
+
+
+

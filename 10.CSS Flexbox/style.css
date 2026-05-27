@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.flex-container {
+  width: 100vw;
+  height: 80vh;
+  background-color: gray;
+  /* flex  */
+
+  display: flex;
+  /* Main Axis */
+  justify-content: center;
+  /* Cross - axis */
+
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.items {
+  height: 100px;
+  flex: 1;
+  background-color: crimson;
+}
+
+.items:nth-child(1) {
+  /* align-self: end; */
+}
+.items:nth-child(2) {
+  /* align-self: start; */
+}
