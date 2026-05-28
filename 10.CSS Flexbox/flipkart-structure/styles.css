@@ -44,6 +44,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  cursor: pointer;
 }
 .top-nav-right {
   display: flex;
