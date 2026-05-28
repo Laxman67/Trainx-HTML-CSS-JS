@@ -27,7 +27,7 @@ flex-grow
 flex-shrink
 flex-basis ( same as width of the box )
 ------------
-  /* flex grow,shrink, basic */
+  /* flex grow,shrink, basis */
   flex:1 1 100px;
   flex :1
 
