@@ -11,13 +11,25 @@ body {
   width: 100vw;
   background-color: #ffffff;
 }
-
+main {
+  width: 75%;
+  background-color: rgb(216, 213, 213);
+  margin: 0px auto;
+}
 header {
   width: 75%;
-  /* background-color: rgb(216, 213, 213); */
   height: 100px;
   /* top, right, bottom left */
   margin: 0px auto;
+  position: fixed;
+  left: 12%;
+  z-index: 100;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  gap: 10px;
 }
 
 #top-nav {
@@ -53,4 +65,83 @@ header {
   justify-content: center;
   gap: 10px;
   width: 30%;
+}
+
+#bottom-nav {
+  background-color: rgb(213, 206, 206);
+  height: 50px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 5px;
+  /* Flex */
+  display: flex;
+  gap: 10px;
+}
+
+.btn-box {
+  width: 70%;
+  background-color: aquamarine;
+  height: 80%;
+}
+.login-box {
+  width: 25%;
+  background-color: rgb(134, 233, 114);
+  height: 80%;
+}
+
+#icons-box {
+  width: 100%;
+  background-color: greenyellow;
+  height: 80px;
+}
+
+#icons-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.icons-items {
+  /* flex: 1; */
+  width: 70px;
+  height: 70px;
+  padding: 5px;
+  background-color: rgb(233, 233, 233);
+}
+
+main {
+  position: relative;
+  top: 230px;
+  margin-left: 11.8%;
+}
+
+#ad-banner {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.ad-banners {
+  flex: 1;
+  background-color: rgb(233, 233, 233);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#banner-item-1 {
+  flex-grow: 2;
+  background-color: aqua;
+}
+#banner-item-2 {
+  flex-grow: 2;
+  background-color: crimson;
+}
+
+#banner-item-3 {
+  flex-grow: 1;
+  background-color: beige;
 }
