@@ -10,8 +10,12 @@
   --wh-slate-800: #1e293b;
   --wh-slate-900: #0f172a;
   --wh-slate-950: #020617;
+
   --primary-text: crimson;
   --text-size: 34px;
+
+  /* Shared width for header and main */
+  --content-width: min(1200px, 75vw);
 }
 
 * {
@@ -23,153 +27,200 @@
 
 html,
 body {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   background-color: #ffffff;
 }
-main {
-  width: 75%;
-  background-color: rgb(216, 213, 213);
-  margin: 0px auto;
-}
+
+/* =========================
+   HEADER
+========================= */
+
 header {
-  width: 75%;
+  width: var(--content-width);
   height: 100px;
-  /* top, right, bottom left */
-  margin: 0px auto;
+
   position: fixed;
-  left: 12%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
   z-index: 100;
 }
+
 nav {
   display: flex;
   flex-direction: column;
-  background-color: rgb(250, 250, 250);
   gap: 10px;
+  background-color: white;
 }
 
 #top-nav {
   display: flex;
   justify-content: space-between;
-  margin: 0px 10px;
   padding: 1%;
+  margin: 0 10px;
 }
 
-.top-nav-left {
+.top-nav-left,
+.top-nav-right {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.top-nav-right {
+  width: 30%;
 }
 
 .btn {
   width: 150px;
   height: 30px;
   padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  cursor: pointer;
-}
-.top-nav-right {
+  border: none;
+  border-radius: 10px;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 30%;
+  justify-content: space-evenly;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn img {
+  width: 32px;
 }
 
 #bottom-nav {
-  background-color: rgb(213, 206, 206);
-  height: 50px;
-  border-radius: 10px;
-  width: 100%;
-  padding: 5px;
-  /* Flex */
   display: flex;
   gap: 10px;
+
+  width: 100%;
+  height: 50px;
+
+  padding: 5px;
+  border-radius: 10px;
+
+  background-color: rgb(213, 206, 206);
 }
 
 .btn-box {
   width: 70%;
-  background-color: aquamarine;
   height: 80%;
+  background-color: aquamarine;
 }
+
 .login-box {
   width: 25%;
-  background-color: rgb(134, 233, 114);
   height: 80%;
+  background-color: rgb(134, 233, 114);
 }
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+  width: var(--content-width);
+
+  /* Push content below fixed header */
+  margin: 230px auto 0;
+
+  /* TODO : Remove after implementing */
+  background-color: rgb(231, 228, 228);
+}
+
+/* =========================
+   ICONS
+========================= */
 
 #icons-box {
   width: 100%;
-  background-color: greenyellow;
   height: 80px;
-}
 
-#icons-box {
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 5px;
-  background-color: var(--wh-slate-700);
+
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+
+  margin-bottom: 1rem;
 }
 
 .icons-items {
-  /* flex: 1; */
   width: 70px;
   height: 70px;
+
   padding: 5px;
-  background-color: rgb(233, 233, 233);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
 }
 
-main {
-  position: relative;
-  top: 230px;
-  margin-left: 11.8%;
-}
+/* =========================
+   AD BANNERS
+========================= */
 
 #ad-banner {
   display: flex;
   gap: 10px;
   padding: 10px;
+  overflow-x: auto;
 }
 
 .ad-banners {
   flex: 1;
-  background-color: rgb(233, 233, 233);
-  height: 150px;
+  width: 480px;
+  height: 220px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-#banner-item-1 {
-  flex-grow: 2;
-  background-color: aqua;
+.ad-banners img {
+  width: 100%;
 }
+
+#banner-item-1,
 #banner-item-2 {
   flex-grow: 2;
-  background-color: crimson;
 }
 
 #banner-item-3 {
   flex-grow: 1;
+}
+
+#banner-item-3 img {
+  width: 100%;
+  height: 100%;
   background-color: beige;
 }
 
+/* =========================
+   HOME DECOR
+========================= */
+
 #home-decor {
-  max-width: 100%;
-  height: auto;
-  background-color: var(--wh-slate-700);
+  width: calc(100% - 20px);
+
   margin: 10px;
-  border-radius: 20px;
   padding: 10px;
+
+  border-radius: 20px;
+  background-color: var(--wh-slate-700);
 }
 
 #home-decor-top {
@@ -180,28 +231,45 @@ main {
 
 .right-swipe-icons {
   color: black;
+  background-color: white;
+
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  background-color: white;
 }
 
 #home-decors-cards-container {
-  display: flex;
   width: 100%;
+
+  display: flex;
   justify-content: space-evenly;
-  background-color: #ffffff;
+
   margin-top: 1.5rem;
-  border: 0.5rem;
+
+  background-color: white;
+  border-radius: 1rem;
 }
 
 .home-decor-cards {
+  flex: 1;
+  padding: 1rem;
+  margin: 1rem;
+
   display: flex;
   flex-direction: column;
-  height: 200px;
-  width: 200px;
-  background-color: #cdc7c7;
-  margin: 1rem;
-  border-radius: 0.5rem;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  gap: 0.3rem;
+
+  border-radius: 0.5rem;
+  background-color: #f1eeee;
+  border-radius: 1rem;
+}
+
+.home-decor-cards img {
+  width: 100%;
+  height: auto;
+}
+
+.home-decor-cards span {
+  font-weight: 600;
 }
