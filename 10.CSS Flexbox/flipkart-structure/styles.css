@@ -1,3 +1,19 @@
+:root {
+  --wh-slate-50: #f8fafc;
+  --wh-slate-100: #f1f5f9;
+  --wh-slate-200: #e2e8f0;
+  --wh-slate-300: #cbd5e1;
+  --wh-slate-400: #94a3b8;
+  --wh-slate-500: #64748b;
+  --wh-slate-600: #475569;
+  --wh-slate-700: #334155;
+  --wh-slate-800: #1e293b;
+  --wh-slate-900: #0f172a;
+  --wh-slate-950: #020617;
+  --primary-text: crimson;
+  --text-size: 34px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -100,6 +116,7 @@ nav {
   align-items: center;
   justify-content: space-around;
   gap: 5px;
+  background-color: var(--wh-slate-700);
 }
 
 .icons-items {
@@ -149,7 +166,7 @@ main {
 #home-decor {
   max-width: 100%;
   height: auto;
-  background-color: #cb3902;
+  background-color: var(--wh-slate-700);
   margin: 10px;
   border-radius: 20px;
   padding: 10px;
