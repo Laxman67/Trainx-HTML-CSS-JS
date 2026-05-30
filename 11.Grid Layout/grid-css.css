@@ -12,13 +12,15 @@ body {
 }
 
 .grid-container {
-  height: 100vh;
+  /* height: 100vh; */
   font-size: 40px;
   display: grid;
 
   /* Grid Properties  */
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 3fr 1fr 2fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 700px;
+  height: 400px;
 }
 
 .grid-item-1 {
