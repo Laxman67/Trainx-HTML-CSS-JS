@@ -19,8 +19,9 @@ body {
   /* Grid Properties  */
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  width: 700px;
-  height: 400px;
+  width: 100vw;
+  /* height: 400px; */
+  background-color: aquamarine;
 }
 
 .grid-item-1 {
@@ -40,6 +41,8 @@ body {
 }
 .grid-item-6 {
   background-color: aquamarine;
+  grid-row: 1/3;
+  grid-column: 1 / span 3;
 }
 .grid-item-7 {
   background-color: blueviolet;

@@ -130,7 +130,9 @@ main {
   margin: 230px auto 0;
 
   /* TODO : Remove after implementing */
-  background-color: rgb(231, 228, 228);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 /* =========================
@@ -213,14 +215,20 @@ main {
    HOME DECOR
 ========================= */
 
-#home-decor {
+#home-decor-1,
+#home-decor-2 {
   width: calc(100% - 20px);
 
   margin: 10px;
   padding: 10px;
 
   border-radius: 20px;
+}
+#home-decor-1 {
   background-color: var(--wh-slate-700);
+}
+#home-decor-2 {
+  background-color: tomato;
 }
 
 #home-decor-top {
@@ -272,4 +280,11 @@ main {
 
 .home-decor-cards span {
   font-weight: 600;
+}
+
+/* Footer */
+footer {
+  width: 100vw;
+  background-color: rgb(39, 38, 38);
+  color: beige;
 }
