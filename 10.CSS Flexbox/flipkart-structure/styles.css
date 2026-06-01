@@ -10,7 +10,7 @@
   --wh-slate-800: #1e293b;
   --wh-slate-900: #0f172a;
   --wh-slate-950: #020617;
-
+  --brand-border-radius: 20px;
   --primary-text: crimson;
   --text-size: 34px;
 
@@ -222,7 +222,7 @@ main {
   margin: 10px;
   padding: 10px;
 
-  border-radius: 20px;
+  border-radius: var(--brand-border-radius);
 }
 #home-decor-1 {
   background-color: var(--wh-slate-700);
@@ -287,4 +287,28 @@ footer {
   width: 100vw;
   background-color: rgb(39, 38, 38);
   color: beige;
+}
+
+#spotlight-container {
+  margin: 10px;
+  border-radius: var(--brand-border-radius);
+}
+
+#spotlight-items-container {
+  display: flex;
+  justify-content: start;
+  margin-top: 1rem;
+  /* flex: 1; */
+  gap: 1rem;
+}
+
+.spotlight-items {
+  width: 200px;
+  overflow: hidden;
+  border-radius: var(--brand-border-radius);
+  text-align: center;
+}
+
+.spotlight-items img {
+  width: 100%;
 }
