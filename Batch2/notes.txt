@@ -1,0 +1,31 @@
+// what is High Level and Low Level
+
+// Hight Level To Machine Code
+// what is Interpretation and COmpilation, or Mixed
+
+// Interpretation : Javascript have set of equivalent corresponding machine code   related to  some keywords
+// with Interpretation :  It's easier to debug because it's translate code line by line but  ..... ?
+
+// Compilation : Change High Level to Machine code
+// with Compilation : translate code at once into machine code but ..... ?
+
+// ========EXECUTION Context===============
+// Execution Context is a small and isolation environment
+1. window (Browser Object)
+2. this: window
+3. variable object
+4. Scope Chain
+
+
+Function Execution Context
+It's called when Fn is called
+
+
+1. arguments object
+2. this: window
+3. variable object
+4. Scope Chain
+
+
+
+
