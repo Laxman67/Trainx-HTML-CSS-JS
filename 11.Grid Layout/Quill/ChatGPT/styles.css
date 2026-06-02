@@ -22,17 +22,21 @@ body {
 } */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: 200px 200px;
+
+  margin: 2rem;
+  gap: 1rem;
 }
 
 .box {
   background-color: skyblue;
 }
-/* .items {
+.items {
+  height: 200px;
   background-color: crimson;
   color: white;
   text-align: center;
   border-radius: 8px;
   font-size: 2rem;
-} */
+}
