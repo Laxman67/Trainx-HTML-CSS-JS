@@ -4,10 +4,10 @@
 // what is Interpretation and COmpilation, or Mixed
 
 // Interpretation : Javascript have set of equivalent corresponding machine code   related to  some keywords
-// with Interpretation :  It's easier to debug because it's translate code line by line but  ..... ?
+// with Interpretation :  It's easier to debug because it's translate code line by line but  slower ?
 
 // Compilation : Change High Level to Machine code
-// with Compilation : translate code at once into machine code but ..... ?
+// with Compilation : translate code at once into machine code but faster ?
 
 // ========EXECUTION Context===============
 // Execution Context is a small and isolation environment
