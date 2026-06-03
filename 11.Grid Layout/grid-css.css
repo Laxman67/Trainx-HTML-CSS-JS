@@ -7,46 +7,54 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  margin: 100px;
 }
 
 .grid-container {
-  /* height: 100vh; */
-  font-size: 40px;
+  /* Container Height and width */
+  height: 600px;
+  width: 50%;
+  border: 1px solid red;
+  background-color: beige;
   display: grid;
 
-  /* Grid Properties  */
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  width: 100vw;
-  /* height: 400px; */
-  background-color: aquamarine;
+  /* grid-template-columns: 100px 100px; */
+  /* Cell Width */
+  /* grid-template-columns: repeat(2, 100px); */
+  grid-template-columns: repeat(2, 1fr);
+
+  /* Cell Height */
+  /* grid-template-rows: 100px 100px 100px 100px; */
+  /* grid-template-rows: repeat(4, 100px); */
+  grid-template-rows: repeat(4, 1fr);
+
+  /*Cell->  Items Level Properties */
+  justify-items: stretch;
+  align-items: stretch;
+
+  /* Container- > cells Align */
+  justify-content: center;
+  align-content: center;
+
+  /* Gaps */
+  /* row-gap: 10px;
+  column-gap: 30px; */
+  gap: 20px;
 }
 
-.grid-item-1 {
+#grid-item-1 {
   background-color: red;
 }
-.grid-item-2 {
-  background-color: green;
-}
-.grid-item-3 {
+.grid-items {
   background-color: blue;
-}
-.grid-item-4 {
-  background-color: yellow;
-}
-.grid-item-5 {
-  background-color: pink;
-}
-.grid-item-6 {
-  background-color: aquamarine;
-  grid-row: 1/3;
-  grid-column: 1 / span 3;
-}
-.grid-item-7 {
-  background-color: blueviolet;
-}
-.grid-item-8 {
-  background-color: crimson;
+  width: 100%;
+  height: 100%;
+  /* flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
 }
