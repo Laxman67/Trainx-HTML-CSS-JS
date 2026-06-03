@@ -53,3 +53,26 @@ grid-template-rows: 200px
 
 
 
+
+=========== 4-6-2026 =============
+
+grid-template-column :  200px 100px auto;
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-rows: 1fr 2fr 1fr;
+grid-template-columns: repeat(3, 300px);
+grid-template-columns: repeat(auto-fill, 200px);
+auto-fill :  add extra columns when space available
+
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+Fit the columns based on the minmax() func.
+auto-fit: fits the cells into width
+
+
+
+grid-auto-columns: 300px;
+grid-auto-flow: column;
+overflow-x: scroll;
+
+
+Website 1:  https://curioos.giantart.com/?_ab=0&_fd=0&_sc=1&pb=0
+Website 2 : https://www.grundini.com/
