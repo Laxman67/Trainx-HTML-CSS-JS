@@ -76,3 +76,8 @@ overflow-x: scroll;
 
 Website 1:  https://curioos.giantart.com/?_ab=0&_fd=0&_sc=1&pb=0
 Website 2 : https://www.grundini.com/
+
+
+https://chromewebstore.google.com/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp
+https://chromewebstore.google.com/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm
+https://chromewebstore.google.com/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh
