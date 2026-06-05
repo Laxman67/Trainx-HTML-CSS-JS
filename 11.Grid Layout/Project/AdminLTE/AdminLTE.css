@@ -1,0 +1,77 @@
+:root {
+  --aside-bg-color: #343a40;
+  --aside-color: #c2c7d0;
+  --main-bg-color: #f8f9fa;
+  --main-color: #191818;
+  --nav-bg-color: #ffffff;
+  --footer-bg-color: #ffffff;
+  --footer-color: #595c5f;
+  --card-border-radius: 0.375rem;
+  --green-card-bg: #198754;
+  --green-card-color: #ffffff;
+  --blue-card-bg: #0d6efd;
+  --blue-card-color: #ffffff;
+  --yellow-card-bg: #ffc107;
+  --yellow-card-color: #000000;
+  --red-card-bg: #dc3545;
+  --red-card-color: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy, sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: gainsboro;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: 15% 1fr 10%;
+  position: relative;
+}
+nav {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background-color: skyblue;
+  background-color: var(--nav-bg-color);
+}
+
+aside {
+  grid-row: 1/4;
+  grid-column: 1/2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 15%;
+  height: 100vh;
+  background-color: var(--aside-bg-color);
+  color: var(--aside-color);
+}
+
+main {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  background-color: aquamarine;
+  background-color: var(--main-bg-color);
+}
+
+footer {
+  grid-row: 3 / span 1;
+  grid-column: 2/3;
+  background-color: var(--footer-bg-color);
+}
+
+footer,
+nav,
+main {
+  padding: 1rem;
+}

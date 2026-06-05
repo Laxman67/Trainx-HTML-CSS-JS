@@ -1,0 +1,97 @@
+
+CDN Link
+.......................
+
+   <link
+
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+      integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+.....................
+
+1. Cart
+ <i class="fa-solid fa-cart-arrow-down"></i>
+
+2. Graph
+<i class="fa-duotone fa-regular fa-chart-column"></i>
+
+3. Profile
+<i class="fa-solid fa-user-plus"></i>
+
+
+4. Pie
+<i class="fa-solid fa-chart-pie"></i>
+
+
+........................................................
+
+
+---------------------------------------------------------
+Top Navbar Icons
+Search
+<i class="fa-solid fa-magnifying-glass" style="color: rgb(3, 18, 43);"></i>
+
+Message
+<i class="fa-regular fa-comment-dots" style="color: rgb(3, 18, 43);"></i>
+
+Bell
+<i class="fa-solid fa-bell" style="color: rgb(3, 18, 43);"></i>
+
+Expand
+<i class="fa-solid fa-maximize" style="color: rgb(3, 18, 43);"></i>
+
+Brightness
+<i class="fa-regular fa-sun" style="color: rgb(3, 18, 43);"></i>
+
+
+=================================
+Aside Icons
+
+Theme Generate
+<i class="fa-solid fa-cookie-bite" style="color: rgb(3, 18, 43);"></i>
+
+Widgets
+<i class="fa-solid fa-box" style="color: rgb(3, 18, 43);"></i>
+
+Layout Options
+<i class="fa-solid fa-clipboard" style="color: rgb(3, 18, 43);"></i>
+
+UI Elements
+<i class="fa-solid fa-tree" style="color: rgb(3, 18, 43);"></i>
+
+MailBox
+<i class="fa-regular fa-envelope" style="color: rgb(3, 18, 43);"></i>
+
+Forms
+<i class="fa-regular fa-pen-to-square" style="color: rgb(3, 18, 43);"></i>
+
+Table
+      <i class="fa-solid fa-table-cells" style="color: rgb(3, 18, 43);"></i>
+
+Page
+<i class="fa-regular fa-file-lines" style="color: rgb(3, 18, 43);"></i>
+Auth
+<i class="fa-solid fa-arrow-right-to-bracket" style="color: rgb(3, 18, 43);"></i>
+---------------------------------------------------------
+
+Colors
+
+:root {
+  --aside-bg-color: #343a40;
+  --aside-color: #ffffff;
+  --main-bg-color: #f8f9fa;
+  --main-color: #191818;
+  --nav-bg-color: #ffffff;
+  --footer-bg-color: #ffffff;
+}
