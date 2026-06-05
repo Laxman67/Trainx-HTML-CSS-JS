@@ -1,16 +1,22 @@
 :root {
   --card-border-radius: 2rem;
   --heading-font-size: 1.8rem;
+  /* Blue */
   --blue-card-bg: #b6ceda;
   --blue-card-color: #153346;
+  /* Purple */
   --purple-card-bg: #c2b2e5;
   --purple-card-color: #4a255d;
+  /* Pink */
   --pink-card-bg: #f481a2;
   --pink-card-color: #571a4e;
+  /* Green */
   --green-card-bg: #c7da8f;
   --green-card-color: #193301;
+  /* Yellow */
   --yellow-card-bg: #fbde70;
   --yellow-card-color: #59450e;
+  /* Orange */
   --orange-card-bg: #f7a274;
   --orange-card-color: #672100;
 }

@@ -10,12 +10,12 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  /* grid-template-areas:
-    'header header header'
+  grid-template-columns: 100px 80% 100px;
+  grid-template-rows: 80px 1fr 40px;
+  grid-template-areas:
+    'header1 header1 header1'
     'nav content sidebar'
     'nav footer footer';
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 80px 1fr; */
 }
 
 header,
@@ -28,8 +28,8 @@ nav {
   border: skyblue 1px solid;
 }
 
-/* header {
-  grid-area: header;
+header {
+  grid-area: header1;
 }
 aside {
   grid-area: sidebar;
@@ -42,4 +42,4 @@ footer {
 }
 nav {
   grid-area: nav;
-} */
+}
