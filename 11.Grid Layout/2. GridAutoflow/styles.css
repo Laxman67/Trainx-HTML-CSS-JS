@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy, sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#container {
+  display: grid;
+  /* grid-template-columns: repeat(3, 200px); */
+  /* grid-template-rows: repeat(3, 200px); */
+  grid-auto-columns: 200px;
+  /*   grid-auto-rows : We need to define that newly created items will be moved to the next row and what will be its height */
+  grid-auto-rows: 220px;
+
+  /*  grid-auto-flow : This is default behaviour |  this is need when we' need to display in one direction like HORIZONTAL*/
+  grid-auto-flow: column;
+  gap: 1em;
+
+  overflow: scroll;
+}
+
+.items {
+  padding: 2rem;
+  background-color: rgb(148, 148, 238);
+  color: white;
+  border-radius: 8px;
+  /* text-align: center; */
+  font-size: 1.5rem;
+}

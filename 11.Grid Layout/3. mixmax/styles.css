@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy, sans-serif;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#container {
+  grid-template-columns: repeat(auto-fit, 200px);
+  display: grid;
+  grid-auto-rows: 200px;
+  /*  */
+  /* align-items: stretch;
+  justify-items: stretch; */
+  gap: 2rem;
+}
+
+.items {
+  background-color: red;
+  width: 100%;
+}
