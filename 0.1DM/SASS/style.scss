@@ -1,0 +1,15 @@
+// Variables
+$var-bg: yellow;
+body {
+  background-color: $var-bg;
+}
+
+$font-size: (
+  'mobile': 16px,
+  'tablet': 25px,
+  'desktop': 70px,
+);
+
+h1 {
+  font-size: map-get($font-size, desktop);
+}

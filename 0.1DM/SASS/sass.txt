@@ -1,0 +1,14 @@
+Syntactically Awesome Style Sheet
+Vscode : Live Sass
+Browser don't know sass
+To help developer to reduce repititive task
+it makes easy to design within and across projects
+
+
+1. Variables
+2. Nesting
+3. Operators
+4. Maps : Allow to store multiple values
+5 .Ampersand Symbol &
+6. Mixins
+7.Extends
