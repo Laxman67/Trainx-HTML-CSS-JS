@@ -1,0 +1,13 @@
+Filter Property in CSS
+
+The filter CSS property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.
+
+
+MDN Link : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/filter
+
+filter: url("/shared-assets/images/examples/shadow.svg#element-id");
+filter: blur(5px);
+filter: contrast(200%);
+filter: grayscale(10%);
+
+

@@ -1,0 +1,14 @@
+A media query is a CSS technique introduced in CSS3 that allows you to apply CSS rules based on the characteristics of the device or viewport displaying the content.
+
+This technique is essential for creating responsive web designs,
+
+
+Common Media Features
+
+Media queries can check for various features, including:
+
+1. Width and Height: min-width, max-width, min-height, max-height
+
+Orientation: orientation: landscape or orientation: portrait
+
+Resolution: min-resolution, max-resolution

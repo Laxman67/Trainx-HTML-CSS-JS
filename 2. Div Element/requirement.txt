@@ -1,4 +1,28 @@
-Types of CSS in Web Development
+* What is MERN stack  ?
+* What are the Components and Technologies  we're using in MERN Stack
+* Why do we need to learn MERN stack
+* What is Client and Server Model
+* What is Request and Response
+* Types of HTTP Verbs / Methods
+
+1 . file:///C:/Users/laxma/Downloads/MERN%20Notes/MERN%20STACK-.pdf
+2. file:///C:/Users/laxma/Downloads/MERN%20Notes/What.Why.Where.Applications%20of%20MERN%20Stack.pdf
+
+Elements and attributes //Done
+Types of Element ? //Done
+Types of CSS, Where and how to add. ?
+What will be preferred First ?
+
+Intro to all Important Elements
+h1 - h6
+p
+div
+
+
+Sematic Elements and Usage
+
+
+
 
 1. Inline CSS
 
@@ -29,7 +53,5 @@ Where and How to use: We need to create separate file and link it with html usin
 
 
 -----------------------------------------------------------------------------
-
-
 
 Image Link : https://www.acte.in/how-to-use-internal-css-style
