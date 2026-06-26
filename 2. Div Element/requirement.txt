@@ -13,10 +13,7 @@ Types of Element ? //Done
 Types of CSS, Where and how to add. ?
 What will be preferred First ?
 
-Intro to all Important Elements
-h1 - h6
-p
-div
+
 
 
 Sematic Elements and Usage

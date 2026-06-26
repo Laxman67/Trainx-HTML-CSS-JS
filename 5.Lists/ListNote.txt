@@ -7,3 +7,25 @@ Types of List in HTML
 1. Ordered List
 2. UnOrdered List
 
+
+
+Summary , details , Images , list item , order lists
+
+Detail>>>Summary > My Table Material
+
+
+Stationary >> details>>summary
+img
+li >> i*5
+
+Eatables
+img
+ol >> li *5
+
+//decoration
+img
+ol>> li*5
+
+
+
+

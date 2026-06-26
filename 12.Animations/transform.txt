@@ -1,0 +1,82 @@
+
+*** CSS transition:Use a transition when you want something to change smoothly after a user action
+click, hover,focus
+
+Changes happen between two states of an element Example ( form
+normal to hover)
+1. Note:  Requires a trigger, such as hovering, clicking, or adding a class with JavaScript.
+2. Can only animate from point A to point B (start to end).
+
+3. Simple to use for small interactions like button hover effects.
+
+----- Target, ON What states and changes you need to perform transition
+
+transition-property : On which property
+transition-duration: duration (For how long)
+transition-timing-function
+transition-delay: to delay
+
+
+the transition-timing-function property specifies the speed curve of the transition effect.
+
+ease - transition will start slow, then go fast, and end slow (this is default)
+linear - transition will keep the same speed from start to end
+ease-in - transition will start slow
+ease-out - transition will end slow
+ease-in-out - transition will have a slow start and end
+
+
+Shorthand: transition: width 2s, height 4s, background-color 3s;
+
+
+
+
+*** CSS animation: Use an animation when you need continuous motion or multiple steps without requiring user interaction.
+
+1. Does not require a trigger; can start automatically.
+2. Uses ~keyframes~ to define multiple stages of animation.
+3. Can loop, repeat, and run continuously.
+4. Offers more control: timing, direction, delays, iteration count, and more.
+Used for complex or continuous animations, such as loaders or moving backgrounds.
+
+Property of animation:
+@keyframess
+animation-name
+animation-duration
+animation-direction
+animation-iteration-count
+
+
+
+Example transition:
+Css.box {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    transition: background 0.5s ease;
+}
+
+.box:hover {
+    background: red;
+}
+
+Example animation:
+Css.box {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    animation: moveBox 2s infinite;
+}
+
+/* Keyframes define multiple points of animation */
+@keyframes moveBox {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
+
+In simple terms:
+
+Use a transition when you want something to change smoothly after a user action.
+Use an animation when you need continuous motion or multiple steps without requiring user interaction.
+
