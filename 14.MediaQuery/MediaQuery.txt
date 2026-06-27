@@ -9,9 +9,6 @@ Media queries can check for various features, including:
 
 1. Width and Height: min-width, max-width, min-height, max-height
 
-Orientation: orientation: landscape or orientation: portrait
-
-Resolution: min-resolution, max-resolution
 
 
 Three Pillars of Responsiveness
@@ -21,3 +18,8 @@ Three Pillars of Responsiveness
 
 
 https://drive.google.com/file/d/1zJ6j-sQ1T9LG7QAf7GXqCwWA8P-HgqXJ/view
+
+
+Orientation: orientation: landscape or orientation: portrait
+
+Resolution: min-resolution, max-resolution
