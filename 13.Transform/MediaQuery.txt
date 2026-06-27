@@ -12,3 +12,12 @@ Media queries can check for various features, including:
 Orientation: orientation: landscape or orientation: portrait
 
 Resolution: min-resolution, max-resolution
+
+
+Three Pillars of Responsiveness
+1. Media Query
+2. Relative Units (%,em and rem) :Elements scale proportion based on its parent container size
+3. Fluid Layouts (Breakpoints)
+
+
+https://drive.google.com/file/d/1zJ6j-sQ1T9LG7QAf7GXqCwWA8P-HgqXJ/view

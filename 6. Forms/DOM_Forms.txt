@@ -1,7 +1,7 @@
 ####################### RECAP START ##########################
 
 1. Tags, Element, Types of Element
-2. Id and Classes -> create link using Id
+2. Id and Classes -> create link using Id >> Demonstrate
 3. Semantics WHAT, WHY,  It's  *** 3 ***  Importance
     a. Accessibility
     b. SEO
@@ -40,29 +40,15 @@ UnOrdered Lists:
 NEW TOPIC -> Basic Intro to DOM and It's uses
 
 
-What is DOM
-
-Full Form : DOM stands for Document Object Model.
-
-DOM It is a programming interface for
-web documents like HTML representing the website (AboutUs Page) as a TREE structure where each node (elements) is an object that can be accessed and manipulated using languages such as (JavaScript)
-
-Special Attribute :  data-* ----> just like id and class ,href,alt, style
-Demo (We'll Deep Dive Later in DOMs Part)
-
-
-
-
-
 ********************* Forms in HTML **************
 
 *Important: MDN Docs and W3school
 
 
 
-What is Forms : An HTML form is used to collect user input.
+What is Forms : An HTML form is used to collect user input. (From client (Browser) and send to Server )
 
-<form> element is used to create an HTML form for user input:
+<form> element is used to create an HTML form for user input that **WRAPS** all the input elements:
  <input> element is the most used form element.
 
 
@@ -72,8 +58,6 @@ What is Forms : An HTML form is used to collect user input.
 <input type="textarea">	Displays a multi-line  texts input field
 <input type="email">	Displays a single-line email input field and provide validation
 <input type="password">	Displays a  text  input for password
-<input type="date">	Input for Date
-<input type="time">	Input for Time
 <input type="range">	Input for Range
 <input type="file">	Displays a single-line text input field
 
@@ -82,9 +66,23 @@ What is Forms : An HTML form is used to collect user input.
 
 <input type="submit">	Displays a submit button (for submitting the form)
 <input type="button">	Displays a clickable button
+<input type="date">	Input for Date
+<input type="time">	Input for Time
+
 <select >	Displays a selectable fields
- <label for="website">Enter your website:</label>
+<label for="website">Enter your website:</label>
   <input type="url" id="website" name="website" placeholder="https://example.com" required>
+
+
+The Fieldset Element
+
+The <fieldset> tag in HTML is used to group related elements in a form, creating a visual box around those elements to improve organization and accessibility.
+* It helps users understand the relationship between different form controls.
+
+The legend  Element (Inside   Fieldset Element)
+* The <legend> tag is placed inside a <fieldset> and serves as a caption for the grouped fields, providing a clear description of what the fields contain
+
+
 ----------------------------
 action = Where should the form data go after submission?
 method = How should the data be sent? (get or post)

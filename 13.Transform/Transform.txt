@@ -1,10 +1,10 @@
 Transform Property in CSS
 
 The transform property in CSS allows you to apply 2D or 3D transformations to elements, such as
-1. rotating
-2. scaling,
-3. translating them
-4. skewing,
+1. rotating : rotate()
+2. scaling, : scaleX() , scaleY() , scale()
+3. translating them :   translateX() , translateY() , translate()
+
 
 
 ====> Rotating <=====
