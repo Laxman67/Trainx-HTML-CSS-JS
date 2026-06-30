@@ -9,21 +9,38 @@
     <h2>Sports Physical Form</h2>
 
     <form action="actionPage.html" method="get">
+      <!-- Athlete Info -->
       <fieldset>
         <legend><h4>Athlete Information</h4></legend>
 
         <ul>
           <li>
             <label for="name">Name: </label>
-            <input type="text" name="username" id="name" />
+            <input
+              type="text"
+              name="username"
+              id="name"
+              placeholder="Enter you name..."
+            />
           </li>
           <li>
             <label for="school">School/Team: </label>
-            <input type="text" name="school" id="school" />
+            <input
+              type="text"
+              name="school"
+              id="school"
+              value="Parul University"
+              readonly
+            />
           </li>
           <li>
             <label for="sportName">Sports Name: </label>
-            <input type="text" name="sportName" id="sportName" />
+            <input
+              type="text"
+              name="sportName"
+              id="sportName"
+              placeholder="Sports Name..eg. Badminton"
+            />
           </li>
           <li>
             <label for="parent_guardian_name">Parent/Guardian Name: </label>
@@ -41,12 +58,204 @@
           <li></li>
         </ul>
       </fieldset>
+
+      <!-- Medical History -->
       <fieldset>
         <legend><h4>Medical History for Athlete</h4></legend>
+        <ul>
+          <li>
+            History of Concussions:
+
+            <input
+              type="radio"
+              name="history_concussions"
+              id="history_concussions_yes"
+              value="history_concussions_yes"
+            />
+            <label for="history_concussions_yes"><strong>Yes</strong></label>
+            <input
+              type="radio"
+              name="history_concussions"
+              id="history_concussions_no"
+              value="history_concussions_no"
+            />
+            <label for="history_concussions_no"><strong>No</strong></label>
+          </li>
+
+          <li>
+            <label for="previous_surgeries"
+              ><strong> Previous Surgeries: </strong></label
+            >
+            <!-- readonly allows the default value to be displayed and submitted -->
+            <input
+              type="text"
+              name="previous_surgeries"
+              id="previous_surgeries"
+              value="Bone Fractures"
+              readonly
+            />
+          </li>
+
+          <li>
+            History of Concussions:
+
+            <input
+              type="radio"
+              name="bone_fractures"
+              id="bone_fractures_yes"
+              value="bone_fractures_yes"
+            />
+            <label for="bone_fractures_yes"><strong>Yes</strong></label>
+            <input
+              type="radio"
+              name="bone_fractures"
+              id="bone_fractures_no"
+              value="bone_fractures_no"
+            />
+            <label for="bone_fractures_no"><strong>No</strong></label>
+          </li>
+          <li>
+            Asthma or breathing problems:
+
+            <input
+              type="radio"
+              name="asthma_or_breathing"
+              id="asthma_or_breathing_yes"
+              value="asthma_or_breathing_yes"
+            />
+            <label for="bone_fractures_yes"><strong>Yes</strong></label>
+            <input
+              type="radio"
+              name="asthma_or_breathing"
+              id="asthma_or_breathing_no"
+              value="asthma_or_breathing_no"
+            />
+            <label for="asthma_or_breathing_no"><strong>No</strong></label>
+          </li>
+        </ul>
       </fieldset>
+      <fieldset>
+        <legend>Select your Department</legend>
+        <select name="department_name" id="department_name">
+          <option value="null">Select your Department</option>
+          <option value="CSE">CSE</option>
+          <option value="AIML">AIML</option>
+          <option value="AIDL">AIDL</option>
+          <option value="CYBER">CYBER</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select your Hobbies</legend>
+
+        <!-- Football -->
+        <label for="footbal">Football</label>
+        <input type="checkbox" name="hobbies_1" value="football" id="footbal" />
+
+        <!-- Badminton -->
+        <label for="Badminton">Badminton</label>
+        <input
+          type="checkbox"
+          name="hobbies_1"
+          value="Badminton"
+          id="Badminton"
+        />
+      </fieldset>
+
       <fieldset>
         <legend><h4>Doctor's Recommendation for sports Partition</h4></legend>
       </fieldset>
+
+      <fieldset>
+        <legend>TextArea</legend>
+        <label for="address"><strong>Address</strong></label>
+        <textarea
+          name="address"
+          id="address"
+          cols=""
+          rows=""
+          placeholder="Enter your address details"
+        ></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Documents/ Images</legend>
+        <label for="profile_image">Profile</label>
+        /* Special Attributes that allow to select specific file type */
+        <input
+          type="file"
+          name="profile_image"
+          accept=".pdf,"
+          id="profile_image"
+        />
+      </fieldset>
+
+      <!-- Labels -->
+      <fieldset>
+        <legend>
+          Explicit Association Labeling / Implicit Association Labeling
+        </legend>
+
+        <!-- This is  Explicit Association Labeling  -->
+        <label for="college_name">College Name:</label>
+        <input type="text" name="" id="college_name" />
+
+        <!-- Implicit Association Labeling -->
+      </fieldset>
+
+      <!-- Date and Times  -->
+      <fieldset>
+        <legend>Date and Time</legend>
+        <label for="dateOfBirth">DOB:</label>
+        <input type="date" name="dateOfBirth" value="" id="dateOfBirth" />
+
+        <br />
+        <label for="dateOfBirth"><strong>Date and Time :</strong></label>
+        <input
+          type="datetime-local"
+          name="dateOfBirth"
+          value=""
+          id="dateOfBirth"
+        />
+      </fieldset>
+
+      <table>
+        <tr>
+          <td><strong>HOBBIES</strong></td>
+
+          <td>
+            <label>
+              Drawing
+              <input type="checkbox" name="hobbies" value="Drawing" />
+            </label>
+
+            <label>
+              Singing
+              <input type="checkbox" name="hobbies" value="Singing" />
+            </label>
+
+            <label>
+              Dancing
+              <input type="checkbox" name="hobbies[]" value="Dancing" />
+            </label>
+
+            <label>
+              Sketching
+              <input type="checkbox" name="hobbies[]" value="Sketching" />
+            </label>
+
+            <br /><br />
+
+            <label>
+              Others
+              <input type="checkbox" name="hobbies[]" value="Others" />
+            </label>
+
+            <input type="text" name="hobbies[]" size="30" />
+          </td>
+        </tr>
+      </table>
+
       <button type="submit">Form Submit</button>
     </form>
   </body>

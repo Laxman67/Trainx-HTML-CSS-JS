@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td,
+      th {
+        border: 2px solid rgb(203, 203, 195);
+        padding: 5px;
+        text-align: center;
+        font-weight: 400;
+      }
+      /*  */
+      thead {
+        background-color: rgb(142, 142, 148);
+      }
+      /*  */
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <!-- colgroup is used to apply styling in each columns -->
+      <colgroup>
+        <col style="background-color: rgb(132, 215, 132)" />
+        <col style="background-color: rgb(8, 241, 187)" />
+      </colgroup>
+      <caption>
+        This Table having employee Salary record
+      </caption>
+
+      <!-- Table Head -->
+      <thead>
+        <tr>
+          <th>EmpCode</th>
+          <th>Emp Name</th>
+          <th>Job Title</th>
+          <th>Salary (LPA)</th>
+        </tr>
+      </thead>
+
+      <!-- Table Body -->
+      <tbody>
+        <tr>
+          <td>911</td>
+          <td>Zoya Shaikh</td>
+          <td>Developer</td>
+          <td>3.6</td>
+        </tr>
+        <tr>
+          <td>911</td>
+          <td>Lisa Dev</td>
+          <td>Tester</td>
+          <td rowspan="2">5.2</td>
+        </tr>
+        <tr>
+          <td>913</td>
+          <td>Deepak</td>
+          <td>Developer</td>
+        </tr>
+        <tr>
+          <td>915</td>
+          <td>Simran Rao</td>
+          <td>HR</td>
+          <td>5.6</td>
+        </tr>
+        <tr>
+          <td>911</td>
+          <td>Zoya Shaikh</td>
+          <td>Developer</td>
+          <td>3.6</td>
+        </tr>
+      </tbody>
+
+      <!--Table Footer  -->
+      <tfoot>
+        <tr style="text-align: center">
+          <td colspan="4">This is table footer</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

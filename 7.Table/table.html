@@ -11,8 +11,9 @@
       tr {
         border: 1px solid;
         border-collapse: collapse;
-        padding: 5px;
+        padding: 4px;
       }
+
       thead {
         background-color: grey;
       }
@@ -20,6 +21,16 @@
   </head>
   <body>
     <table>
+      <caption>
+        This table Contains the data
+      </caption>
+
+      <colgroup>
+        <col span="" style="background-color: lightblue" />
+        <col style="background-color: lightgreen" />
+        <col style="background-color: red" />
+      </colgroup>
+
       <thead>
         <tr>
           <th>Emp Code</th>
@@ -28,6 +39,7 @@
           <th>Salary(LPA)</th>
         </tr>
       </thead>
+
       <tbody>
         <tr>
           <td>911</td>
@@ -60,11 +72,6 @@
           <td>5.6</td>
         </tr>
       </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="4">This is table</td>
-        </tr>
-      </tfoot>
     </table>
   </body>
 </html>
