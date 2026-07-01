@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <style>
+      /* Internal CSS */
+      section {
+        padding: 20px;
+        border: 2px solid red;
+        margin: 30px;
+        margin-left: 0px;
+        text-align: center;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section style="background-color: rgb(245, 233, 219)">
+      MARGIN :Space Outside the Border
+      <section style="background-color: gray">
+        Border
+        <section style="background-color: bisque">
+          PADDING
+          <section style="border: 2px solid blue; background-color: aquamarine">
+            CONTENT
+          </section>
+        </section>
+      </section>
+    </section>
+  </body>
+</html>
+
+/* Requirement: MARGIN--- Padding ,Margin and Border(5px) => 50px BORDER---
+Padding,Margin and Border(5px) => 10px PADDING--- Padding,Margin and Border(5px)
+=> 20px CONTENT- Padding,Margin and Border (5px)=> 20px */ /* */
