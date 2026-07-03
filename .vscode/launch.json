@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Pattern",
+      "request": "launch",
+      "mainClass": "Pattern",
+      "projectName": "Trainx_3741c349"
+    },
+    {
+      "type": "java",
       "name": "Methods",
       "request": "launch",
       "mainClass": "Methods",

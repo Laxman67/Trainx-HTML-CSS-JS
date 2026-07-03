@@ -1,0 +1,5 @@
+If - else
+if-else-if-else
+switch case
+early return pattern
+
