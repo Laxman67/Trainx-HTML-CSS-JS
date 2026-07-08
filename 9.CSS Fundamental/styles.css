@@ -12,3 +12,16 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.box {
+  width: 300px;
+  height: 100px;
+}
+
+.parent {
+  width: 400px;
+}
+
+.child {
+  width: 50%;
+}
