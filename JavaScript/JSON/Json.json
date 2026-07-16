@@ -1,0 +1,22 @@
+[
+  {
+    "name": "France",
+    "capital": "Paris",
+    "population": 67364357,
+    "area": 551695,
+    "currency": "Euro",
+    "isFromIndia": true,
+    "marks": [
+      {
+        "name": "value"
+      }
+    ]
+  },
+  {
+    "name": "Germany",
+    "capital": "Berlin",
+    "population": 83240525,
+    "area": 357022,
+    "currency": "Euro"
+  }
+]

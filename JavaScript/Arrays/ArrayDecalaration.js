@@ -142,8 +142,8 @@ const cart = [
   { name: 'External Hard Drive', quantity: 1, price: 4800 },
   { name: 'Laptop Stand', quantity: 2, price: 900 },
 ];
-const marks = [10, 20, 30, 20, 50];
-console.log(marks.filter((el) => el === 20));
+
+const markss = [10, 20, , [30, 40, 50], [30, [60, 70, 40]], 20, 50];
 
 //Map():
 //sort():
@@ -155,7 +155,31 @@ console.log(marks.filter((el) => el === 20));
 // ===============QUESTIONS=========START
 
 // 1. Write a Function named (BasicStudentDetails) that create a new Arrays of Object {name,email,phone}
-// 2. Write a program to get  the Total Price using reduce() method and then Get the percentage
+function BasicStudentDetails(value) {
+  let { name, email, phone, isGraduated } = value;
+  return {
+    name,
+    email,
+    phone,
+    isGraduated,
+  };
+}
+
+//TODO  Desctructure the object
+let mofifiedStudents = students.map((student) => BasicStudentDetails(student));
+
+// console.log(mofifiedStudents);
+
+const marks = [95, 78, 90, 78, 59];
+// 2. Write a program to get  the Total Marks using reduce() method and then Get the percentage
+
+function getPercentage(studentsArray) {
+  const required = studentsArray.length * 100;
+
+  let total = studentsArray.reduce((acc, curr) => acc + curr, 0);
+  const result = (total / required) * 100;
+  return `Percentage is : ${result}%`;
+}
 
 // ====== What is Template Literal ====
 
@@ -168,10 +192,25 @@ console.log(marks.filter((el) => el === 20));
 // 3. create a program that send email (JUST SIMULATION) and greet every user with name, email, Phone, message , subject
 
 // Template For Mail
+
+// {
+//     name: 'Aarav Sharma',
+//     email: 'aarav.sharma@example.com',
+//     year: 1,
+//     course: 'BCA',
+//     phone: '9876543210',
+//     isGraduated: false,
+//     examScore: [
+//       { subject: 'Java', marks: 82 },
+//       { subject: 'HTML', marks: 91 },
+//       { subject: 'JavaScript', marks: 88 },
+//     ],
+//   },
+
 // To      : {aarav.sharma@example.com}
 // Subject : Welcome to {JavaScript} Course
 
-// Hello Aarav Sharma,
+// Hello {Aarav Sharm},
 
 // We are happy to have you in our {JavaScript} course.
 // We hope you enjoy learning with us.
@@ -183,53 +222,82 @@ console.log(marks.filter((el) => el === 20));
 // Parul University
 
 // 4. Return the highest examscore from students Array >>>
+// ======Question 4 =========
+//  examScore: [
+//       { subject: 'Java', marks: 82 }, 82+9+88= >179
+//       { subject: 'HTML', marks: 91 },
+//       { subject: 'JavaScript', marks: 88 },
+//  ],
+
+// console.log(
+//   students.map((student) =>
+//     student.examScore.reduce((acc, curr) => acc + curr.marks, 0)
+//   )
+// );
+// ======Question 4 END
+//
+//  =========
 
 // 5 Return all the student who are in BCA Course  >>> create a function that accepts CourseName and return result
+// 6. Calculate the Total Price of the Products in Cart
 
-/*
-Welcome to ABC College!
+// EXPECTED OUTPUT : Total Price : Rs. .....
 
-We hope you have a wonderful learning experience in the ${student.course} program.
-
-Best Regards,
-ABC College`;
- */
+// 7. Example [13, 45, 67, 21, 10]
+// 7. EXPECTED OUTPUT :  10_X_13_X_21_X_45_X_67
 
 // ===============QUESTIONS=========END
+//  TODO : Desctructure
+let arrayOfMarks = students.map((student) =>
+  student.examScore.reduce((acc, { marks }) => marks + acc, 0)
+);
 
+let sortedArray = arrayOfMarks.sort((a, b) => b - a);
+// console.log(arrayOfMarks);
+// console.log(`Highest Marks : ${sortedArray[0]}`);
+
+/**
+ * This Function is used to create template based on the current Object
+ * @param {*} students
+ * @returns string
+ */
+
+// TODO : Destructure the object
 function sendEmail(student) {
+  const { email, course, name, phone } = student;
   let template = `
-  To      : ${student.email}
-Subject : Welcome to ${student.course} Course
+To      : ${email}
+Subject : Welcome to ${course} Course
 
-Hello Aarav Sharma,
+Hello ${name},
 
-We are happy to have you in our ${student.course} course.
+We are happy to have you in our ${course} course.
 We hope you enjoy learning with us.
 If you have any questions, feel free to contact us.
 
-Phone : ${student.phone}
+Phone : ${phone}
 
 Regards,
 Parul University
-  `;
+`;
 
   return template;
 }
 
-// students.forEach((student) => console.log(sendEmail(student)));
+students.forEach((student) => {
+  console.log(sendEmail(student));
+});
 
-function* sentMailToStudent(students) {
-  yield console.log(sendEmail(students[0]));
-  yield console.log(sendEmail(students[1]));
-  yield console.log(sendEmail(students[2]));
-  yield console.log(sendEmail(students[3]));
-  yield console.log(sendEmail(students[4]));
-  yield console.log(sendEmail(students[5]));
+let cars = ['Maruti', 'Benz', 'Breeza', 'Etios', 'Dzire'];
+const Smarks = [10, 20, , [30, 40, 50], [30, [60, 70, 40]], 20, 50];
+
+let newArr = Smarks.flat(2);
+
+function outer() {
+  let name = 'John'; // Outer function variable
+  function inner() {
+    console.log('Hello ' + name);
+  }
+  inner(); // Output: "Hello John"
 }
-
-// let sendEmails = sentMailToStudent(students);
-// sendEmails.next();
-// sendEmails.next();
-// sendEmails.next();
-// sendEmails.next();
+// outer();
