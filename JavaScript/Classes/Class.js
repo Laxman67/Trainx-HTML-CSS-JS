@@ -9,35 +9,38 @@ console.log(Vinjay_Sindh.accountHolderName);
 
 /**
  *
+ *
+ *
+ * ====Shopping Cart System====
+Create a sepeate Class  specific to Features
 
-//
-Product Categories
-Product Search
-Filters & Sorting
-Product Details Page
-//
-Shopping Features
-Shopping Cart
-Add/Remove Items
-Update Quantity
-//
 
-Checkout
-Order Summary
-Cancel Order
-Payment Features
-Multiple Payment Methods (Credit/Debit Card, UPI, Net Banking, Wallets, Cash on Delivery)
-Secure Payment Gateway
-Payment Status
-Invoice Generation
-Email Notifications
-Inventory Features
-Stock Management
-Out-of-Stock Alerts
-Low Stock Notifications
+class Payment{}
+ * checkoutForPayment(orderId)
+ * getTotalAmount()
+
+
+class Order{}
+
+Product *Object* {
+productId:
+description:
+price:
+}
+
+ * Array Of Objects
+ * 1. Products* ( if product is added into cart then remove from here)
+ * 2. CartItems* (add product here and remove from Products)
+ * createCartProduct(arrayOfProducts or {...products})
+ * getProductsDetails(productID)
+ * makeOrder(products)
+ * AddToCart(product)
+ * RemoveFromCart(productId)
+
+
+class Notification{}
+ * Notification(type) on Order Successfull! and Order Cancelled
+ * Create Template for Each
+ * 1. Order Successfull!
+ * 2. Order Cancelled!
  */
-
-// FIXME:
-//  get accountHolderName() {
-//     return this.__accountHolderName;
-//   }
