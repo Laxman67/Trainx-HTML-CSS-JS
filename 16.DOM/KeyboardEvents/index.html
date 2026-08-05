@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Events</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: salmon;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+  <script>
+    document.addEventListener('keypress', (e) => {
+      console.log(e.key);
+    });
+  </script>
+</html>

@@ -1,3 +1,4 @@
+//TODO: Inheritance
 class Bank {
   // Private Properties and Methods
   #percentageInProfit = 1.5;
@@ -29,12 +30,15 @@ class Bank {
   }
 
   deposit(amount) {
+    console.log('Deposite Called');
+
     this.balance += Number(amount);
     console.log(
-      `Amount of Rs. ${amount} is Deposited by ${this._accountHolderName}`
+      `Amount of Rs. ${amount} is Deposited by ${this.__accountHolderName}`
     );
+    console.log(Object(Object().__proto__));
 
-    // console.log(sendDepositEmail.call(this, amount));
+    Object().__proto__.sendDepositEmail.call(this, amount);
   }
   checkBalance() {
     console.log(`Your balance is ${this.balance}`);
@@ -72,9 +76,6 @@ class Bank {
     console.log(`Account Balance = ${Number(balance)}`);
   }
 }
-
-//TODO: Inheritance
-
 class Sindbank extends Bank {
   constructor(name, mobile, email, amount) {
     super(name, mobile, email, amount);
@@ -91,31 +92,25 @@ class Sindbank extends Bank {
   }
 }
 
-// let obj1 = new Bank('Raj', '5959561000', 'raj45@gmail.com', 522000);
-let obj3 = {
-  name: 'Manish',
-};
+let obj1 = new Bank('Raj', '5959561000', 'raj45@gmail.com', 522000);
 
-let obj2 = Object.create(obj3);
-
-console.log(obj2.__proto__.name);
-console.log(obj2.name);
-
+// obj1.deposit(96000);
 // FIXME: These are Utility functions
 //email for withdrawing money
-function sendWithdrawEmail(amount, name) {
-  return `To ${name},
-    This is to inform you that amount of Rs.${amount} is withdrawn | Available Balance is ${this.balance}`;
-}
-function InsufficientFundEmail(amount) {
-  return `To ${this.accountHolderName},
-    You're trying to withdraw Balance then available Rs .${amount}`;
-}
-//email for depositing money
-function sendDepositEmail(amount) {
-  return `To ${this.accountHolderName},
-    This is to inform you that amount of Rs.${amount} is deposited`;
-}
+// function sendWithdrawEmail(amount, name) {
+//   return `To ${name},
+//     This is to inform you that amount of Rs.${amount} is withdrawn | Available Balance is ${this.balance}`;
+// }
+
+// function InsufficientFundEmail(amount) {
+//   return `To ${this.accountHolderName},
+//     You're trying to withdraw Balance then available Rs .${amount}`;
+// }
+// //email for depositing money
+// function sendDepositEmail(amount) {
+//   return `To ${this.accountHolderName},
+//     This is to inform you that amount of Rs.${amount} is deposited`;
+// }
 
 // TODO: Prototype
 // console.log(obj1.__proto__.__proto__.__proto__);

@@ -22,11 +22,12 @@ we've covered display Properties
   display : ?
 }
 
-1.
-2.
-3.
-4.
+1.Block
+2.Inline
+3.Inline-block
+4.Flex
 5.Grid
+6.
 
 
 Grid Container Properties

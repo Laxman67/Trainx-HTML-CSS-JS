@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Events</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: salmon;
+        border-radius: 20px;
+        margin-left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <span>hello</span>
+    </div>
+    <!-- <input type="color" id="slider" /> -->
+  </body>
+  <script>
+    document.getElementById('box').addEventListener('mousemove', (e) => {
+      const { clientX, clientY, offsetX, offsetY } = e;
+      console.log(`Client X: ${clientX}`);
+      console.log(`Client Y: ${clientY}`);
+      console.log(`Offset X: ${offsetX}`);
+      console.log(`OffsetYX: ${offsetY}`);
+
+      // console.log('mousedown');
+    });
+    // document.getElementById('slider').addEventListener('change', (e) => {
+    //   console.log(e.target.value);
+    // });
+  </script>
+</html>

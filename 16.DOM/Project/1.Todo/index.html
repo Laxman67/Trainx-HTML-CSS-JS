@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/8019/8019152.png"
+      type="image/x-icon"
+    />
+
+    <title>Todo List</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #eef2ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      #todo-container {
+        width: 70vw;
+        min-height: 80vh;
+        background: #fff;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Header */
+
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        background: #4f46e5;
+        color: white;
+        padding: 15px;
+        border-radius: 12px;
+      }
+
+      header img {
+        background: white;
+        padding: 6px;
+        border-radius: 50%;
+      }
+
+      /* Input */
+
+      .input-container {
+        display: flex;
+        gap: 12px;
+        margin: 25px 0;
+      }
+
+      #input-box {
+        flex: 1;
+        padding: 12px 15px;
+        border: 2px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+        transition: 0.3s;
+      }
+
+      #input-box:focus {
+        border-color: #4f46e5;
+      }
+
+      #add-btn {
+        background: #4f46e5;
+        color: white;
+        border: none;
+        padding: 12px 22px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      #add-btn:hover {
+        background: #3730a3;
+      }
+
+      /* Todo List */
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background: #f8fafc;
+        padding: 14px 18px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      .btn-group {
+        display: flex;
+        gap: 10px;
+      }
+
+      .complete-btn,
+      .remove-btn {
+        border: none;
+        padding: 8px 15px;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 14px;
+      }
+
+      .complete-btn {
+        background: #16a34a;
+      }
+
+      .complete-btn:hover {
+        background: #15803d;
+      }
+
+      .remove-btn {
+        background: #dc2626;
+      }
+
+      .remove-btn:hover {
+        background: #b91c1c;
+      }
+
+      .completed-task {
+        text-decoration: line-through;
+        color: gray;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="todo-container">
+      <header>
+        <h2>My Todo List</h2>
+
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/8019/8019152.png"
+          width="50"
+          height="50"
+          alt=""
+        />
+      </header>
+
+      <!-- Input Container -->
+      <div class="input-container">
+        <input type="text" id="input-box" placeholder="Enter a new task..." />
+
+        <button id="add-btn">+ Add Item</button>
+      </div>
+
+      <ul id="list"></ul>
+    </div>
+
+    <script>
+      // let todos = [];
+      // todos.push(newTodoItem);
+      // console.log(todos);
+
+      //  Select the input Element
+      let inputElement = document.getElementById('input-box');
+
+      // Select the Button to attached event
+      let addBtn = document.getElementById('add-btn');
+
+      // Container ==>  ul tag
+      let listContainer = document.getElementById('list');
+
+      addBtn.addEventListener('click', () => {
+        let inputText = inputElement.value;
+        inputElement.value = '';
+        let newListItem = document.createElement('li');
+        newListItem.innerHTML = `
+                <span>${inputText}</span>
+                <div class="btn-group">
+                  <button class="complete-btn">Complete</button>
+                  <button class="remove-btn">Remove</button>
+                </div>`;
+
+        listContainer.append(newListItem);
+        // // Creating Object with randomId,name,completed property
+        // let newTodoItem = {
+        //   taskId: crypto.randomUUID(),
+        //   name: inputText,
+        //   completed: false,
+        // };
+      });
+
+      listContainer.addEventListener('click', (e) => {
+        const { target, type, value } = e;
+        console.log(target);
+        console.log(type);
+
+        // Mark Completed Task
+        if (e.target.classList.contains('complete-btn')) {
+          e.target.style.display = 'none';
+          console.log(
+            e.target.parentElement.parentElement.firstElementChild.setAttribute(
+              'class',
+              'completed-task'
+            )
+          );
+
+          console.log(
+            e.target.parentElement.previousSiblingElement.setAttribute.add(
+              'class',
+              'completed-task'
+            )
+          );
+        }
+
+        // Remove this Element
+        if (e.target.classList.contains('remove-btn')) {
+          // console.log(e.target.parentElement.parentElement);
+          let currentListItem = e.target.parentElement.parentElement;
+          listContainer.removeChild(currentListItem);
+        }
+      });
+    </script>
+  </body>
+</html>
