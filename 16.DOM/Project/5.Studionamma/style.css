@@ -1,11 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:
-    Georgia,
-    gilroy sans-serif;
-  font-weight: 300;
 }
 
 html,
@@ -19,16 +17,21 @@ body {
   position: relative;
 }
 #nav-ribbon {
-  width: 100%;
+  /* FIXME: Remove BG */
+  /* background-color: azure; */
   background-color: transparent;
+
+  /* FIXME: Z-index */
+  z-index: 11;
+  width: 100%;
   height: 100px;
-  position: fixed;
+  position: absolute;
   top: 0px;
   /* Flex  */
   display: flex;
   justify-content: space-between;
-  font-family: 'Gt Pressura Mono', Georgia, 'Times New Roman', Times, serif;
-  font-weight: 300;
+  font-family: 'GT Pressura Mono';
+  font-weight: 600;
   letter-spacing: 0.1rem;
 }
 #nav-ribbon-left,
@@ -38,73 +41,50 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-#nav-ribbon-left {
-  /* background-color: red; */
-}
-#nav-ribbon-right {
-  /* background-color: rgb(17, 113, 6); */
-}
-.top-section {
+
+#top-section {
+  z-index: 10;
   width: 100vw;
   height: 100vh;
   position: relative;
-}
-#animated-char-box {
-  width: 100vw;
-  height: 70%;
-  position: absolute;
-  top: 20%;
-  margin: 0 auto;
-  /* background-color: blue; */
-
-  font-size: 150px;
-  letter-spacing: -10px;
-  font-family: 'mixtapeMike_TRIAL', 'Arial Black', Verdana, sans-serif;
-  font-weight: 900;
-
-  opacity: 1;
-}
-#animated-char-box-top div,
-#animated-char-box-middle div,
-#animated-char-box-bottom div {
-  display: inline;
-  display: flex;
-  /* gap: 2rem; */
-  justify-content: space-around;
-}
-#animated-char-box-top,
-#animated-char-box-bottom,
-#animated-char-box-middle {
-  display: flex;
-  gap: 2rem;
-  width: 50%;
-  margin: 0 auto;
-  /* background-color: red; */
-}
-#animated-char-box p {
-  display: inline-block;
-  margin: 0;
-  opacity: 0;
-
-  transform: translate(var(--x), var(--y)) rotate(var(--rotate))
-    scale(var(--scale));
-
-  transition:
-    transform 1.5s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.8s ease;
-}
-#animated-box-cursor-box {
-  position: absolute;
-  width: 300px;
-  height: 500px;
+  /* FIXME: Remove After  */
   background-color: red;
-  border-radius: 20px;
-  top: 10%;
-  display: none;
-  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Apply transitions */
 }
-#animated-char-box.animate p {
-  opacity: 1;
 
-  transform: translate(0, 0) rotate(0deg) scale(1);
+#animated-character-box {
+  width: 40%;
+  height: auto;
+  padding: 10px;
+  /* FIXME: Remove After  */
+
+  background-color: green;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 150px;
+  font-weight: 900;
+  line-height: 120px;
+  text-align: center;
+}
+
+#animated-cursor-box {
+  /* FIXME: Z-index */
+  z-index: 12;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px 10px;
+  /* Position based on the cursor */
+  position: absolute;
+  transition: all linear 0.2s;
+
+  /* TODO: only for debug */
+  /* top: 10px;
+  left: 10px; */
+  opacity: 0;
+}
+#animated-cursor-box video {
+  width: 110%;
 }
