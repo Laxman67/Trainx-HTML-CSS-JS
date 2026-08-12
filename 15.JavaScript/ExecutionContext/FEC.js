@@ -1,10 +1,10 @@
 debugger;
-console.log('Global Execution Context Start');
+console.log('Global Execution Context Start'); //X
 
-var globalVariable = 'I am a global Variable';
+var globalVariable = 'I am a global Variable'; //
 
 console.log(globalVariable);
-console.log(greet());
+// console.log(greet());
 greet();
 
 console.log('Global Execution Context End');
@@ -14,27 +14,26 @@ function greet() {
   var name = 'Hastag';
   console.log('Inside Global Function');
   return 900;
+  function sum() {
+    console.log(78 + 78);
+  }
 }
 
 /**
- * Memory Phase
- * globalVariable='I am a global Variable';
- * greet=function greet() {
-  let name = 'Hastag';
+ *Creation Phase
+ *var globalVariable= 'I am a global Variable'
+ *greet=function greet() {
+  var name = 'Hastag';
   console.log('Inside Global Function');
+  return 900;
 }
  *
+ *
  * Execution Phase
- *console.log('Global Execution Context Start');
- globalVariable - <Output
- console.log('Inside Global Function');
- undefined
-  console.log('Inside Global Function');
-console.log('Global Execution Context End');
+ * console.log('Global Execution Context Start');
+ *
+*var globalVariable = 'I am a global Variable'; //*
+console.log(globalVariable);
 
-FEC: greet
- ------------Memory Phase | ----Execution Phase
-name='Hastag' var name = 'Hastag';
-  console.log('Inside Global Function');
-
-  */
+ *
+ *  */

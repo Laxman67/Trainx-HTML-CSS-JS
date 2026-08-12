@@ -20,14 +20,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- FIXME: This is the nav -->
+    <div id="follower"></div>
     <!-- Navbar -->
     <nav id="nav-ribbon">
       <div id="nav-ribbon-left">
         <p>STUDIO NAMMA</p>
-        <p>DARK MODE</p>
+        <p id="mode">DARK MODE</p>
       </div>
       <div id="nav-ribbon-right">
-        <p>MENU</p>
+        <p id="menu">MENU</p>
         <p>LET'S TALK</p>
       </div>
     </nav>
@@ -40,6 +42,44 @@
         autoplay
         muted
       ></video> -->
+
+      <!-- Overlay onclick MENU Btn -->
+      <div id="overlay">
+        <div class="overlay-menus">
+          <div class="overlay-item">
+            <img src="assets/image-6.gif" alt="" />
+            <h3>HOME</h3>
+          </div>
+          <div class="overlay-item">
+            <img src="assets/image-1.gif" alt="" />
+            <h3>WORK</h3>
+          </div>
+          <div class="overlay-item">
+            <img src="assets/image-2.gif" alt="" />
+            <h3>SERVICE</h3>
+          </div>
+          <div class="overlay-item">
+            <img src="assets/image-3.gif" alt="" />
+            <h3>APPROACH</h3>
+          </div>
+        </div>
+        <div class="overlay-menus">
+          <div class="overlay-item">
+            <img src="assets/image-4.gif" alt="" />
+            <h3>STUDIO</h3>
+          </div>
+
+          <div class="overlay-item">
+            <img src="assets/image-5.gif" alt="" />
+            <h3>PLANS</h3>
+          </div>
+          <div class="overlay-item">
+            <img src="assets/image-6.gif" alt="" />
+            <h3>NEWS</h3>
+          </div>
+        </div>
+      </div>
+
       <!--TODO: Element 1 -->
       <div id="animated-cursor-box">
         <video src="animated-cursor-box-vedio.mp4" loop autoplay></video>
@@ -51,6 +91,110 @@
       </div>
     </div>
 
+    <!-- TODO: Element 3: Vedio Section -->
+
+    <div
+      style="
+        padding: 56.25% 0 0 0;
+        position: relative;
+        width: 99vw;
+        margin: 0 auto;
+      "
+    >
+      <iframe
+        src="https://player.vimeo.com/video/1127104834?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
+        frameborder="0"
+        allow="
+          autoplay;
+          fullscreen;
+          picture-in-picture;
+          clipboard-write;
+          encrypted-media;
+          web-share;
+        "
+        referrerpolicy="strict-origin-when-cross-origin"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+        title="Showreel_Namma_EN"
+        data-ready="true"
+      >
+      </iframe>
+    </div>
+
+    <!-- FIXME: PopOut Area -->
+    <div class="popout-area">
+      <div class="popout-area-head">
+        <p>Creative studio building premium Brands</p>
+      </div>
+      <div class="popout-area-content">
+        <p>It’s never “just a website.”</p>
+        <p>
+          Every
+          <span class="highlight"
+            >detail
+            <img
+              src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d143844e199c5fe25893c6_Details%201.webp"
+              alt=""
+              class="image-highlight"
+            />
+            <img
+              src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d14384921ac39670293bad_Details2.webp"
+              alt=""
+              class="image-highlight"
+            />
+            <img
+              src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d14384e95f535d6ce77d4f_Details3.webp"
+              alt=""
+              class="image-highlight"
+            />
+            <img
+              src="http://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d14384e6539b091e5c0c8b_Details4.webp"
+              alt=""
+              class="image-highlight"
+            />
+            <img
+              src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d14384b8a083b5d518278d_Details5.webp"
+              alt=""
+              class="image-highlight"
+            />
+          </span>
+          matters.
+        </p>
+        <p>We craft digital experiences.</p>
+        <p>Your design. Our obsession.</p>
+        <p>
+          Your brand. Our
+          <span class="highlight"
+            >playground
+            <img
+              src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d1446a128c7643746e47f9_Playground1.webp"
+              alt=""
+              class="image-highlight"
+            />
+            <img
+              src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d1446a83ac058871c1ccfc_Playground2.webp"
+              alt=""
+              class="image-highlight"
+            />
+            <img
+              src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d1446a3ce130a222671480_Playground3.webp"
+              alt=""
+              class="image-highlight"
+            />
+            <img
+              src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d1446a796dfc08d400d6ea_Playground4.webp"
+              alt=""
+              class="image-highlight"
+            />
+            <img
+              src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d1446a8736b633433d00f9_Playground5.webp"
+              alt=""
+              class="image-highlight"
+            /> </span
+          >.
+        </p>
+      </div>
+    </div>
     <script src="script.js"></script>
+    <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
   </body>
 </html>

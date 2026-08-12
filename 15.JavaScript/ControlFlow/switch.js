@@ -8,13 +8,14 @@
 // Anything else → Invalid marks
 
 */
-let value = getGrade(90);
-console.log(getGrade());
-
+// let value = getGrade(90);
+// console.log(getGrade());
+debugger;
+getGrade(90);
 function getGrade(marks) {}
 
 // b.	Rock – Paper Scissor
-whoWins(user, computer);
+// whoWins(user, computer);
 // User   and     Computer
 
 // User Winning Rock: rock – scissor->WIN
