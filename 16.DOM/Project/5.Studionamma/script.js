@@ -69,7 +69,7 @@ menuText.addEventListener('click', (e) => {
   if (overlayIsOpen) {
     e.target.textContent = 'CLOSE';
     overlayMenus.style.opacity = 1;
-    overlayMenus.style.top = '-10%';
+    overlayMenus.style.top = '-0%';
     // Dark Mode
     document.getElementById('nav-ribbon').style.color = 'black';
     modeChangeText.style.visibility = 'hidden';

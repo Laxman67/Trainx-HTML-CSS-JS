@@ -112,16 +112,18 @@ body {
 /* oVERLAYS */
 #overlay {
   display: flex;
+  align-items: center;
+  padding-top: 4rem;
   gap: 15rem;
   font-family: 'Bebas Neue', sans-serif;
   width: 100vw;
   height: 100%;
   box-sizing: border-box;
-  padding: 150px 3rem;
+  /* padding: 150px 3rem; */
   /* position */
   position: absolute;
   background-color: white;
-  top: -110%;
+  top: -100%;
   /*FIXME:  OVERLAY: STEP 2*/
   transition: all 0.3s ease;
   cursor:
@@ -132,10 +134,12 @@ body {
   /* color: red; */
   /* background-color: green; */
 }
-
+.overlay-menus {
+  margin-left: 2rem;
+}
 .overlay-menus h3 {
   font-size: 120px;
-  line-height: 100px;
+  line-height: 80px;
 }
 
 .overlay-item {
