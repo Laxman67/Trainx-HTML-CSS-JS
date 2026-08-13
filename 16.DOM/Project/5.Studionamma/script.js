@@ -73,6 +73,10 @@ menuText.addEventListener('click', (e) => {
     // Dark Mode
     document.getElementById('nav-ribbon').style.color = 'black';
     modeChangeText.style.visibility = 'hidden';
+    // TODO: Add Translate Effect
+    overlayHeading.forEach((heading) => {
+      heading.style.translate = '0% 0%';
+    });
 
     // overlayMenus.style.transform = 'translateY(0%)';
   } else {
@@ -81,9 +85,10 @@ menuText.addEventListener('click', (e) => {
     overlayMenus.style.top = '-110%';
     modeChangeText.style.visibility = 'visible';
 
-    // document.getElementById('nav-ribbon').style.color = 'black';
-
-    // overlayMenus.style.transform = 'translateY(-100%)';
+    // TODO: Add Translate Effect
+    overlayHeading.forEach((heading) => {
+      heading.style.translate = '-100% 100%';
+    });
   }
   if (isDarkMode) {
     document.getElementById('nav-ribbon').style.color = 'white';
