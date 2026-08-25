@@ -8,6 +8,9 @@ let overlayMenus = document.getElementById('overlay');
 let overlayHeading = document.querySelectorAll('.overlay-item h3');
 let isDarkMode = false;
 let overlayIsOpen = false;
+let contactText = document.getElementById('contact');
+let contactFormOverlay = document.getElementById('contact-form-overlay');
+let navbar = document.getElementById('nav-ribbon');
 
 document.addEventListener('mousemove', (e) => {
   // console.log(e.clientX);
@@ -50,7 +53,7 @@ topSection.addEventListener('mouseleave', (e) => {
   cursorBox.style.opacity = 0;
 });
 
-// Overlays Menus
+// Overlays Menu Text
 
 menuText.addEventListener('mouseenter', (e) => {
   e.target.textContent = 'CLOSE';
@@ -87,7 +90,7 @@ menuText.addEventListener('click', (e) => {
 
     // TODO: Add Translate Effect
     overlayHeading.forEach((heading) => {
-      heading.style.translate = '-100% 100%';
+      heading.style.translateY = '-100% 100%';
     });
   }
   if (isDarkMode) {
@@ -169,4 +172,25 @@ highlights.forEach((highlight) => {
     idx = 0;
     zIndex = images.length;
   });
+});
+
+// Overlays Contact Text
+
+contactText.addEventListener('mouseenter', (e) => {
+  e.target.textContent = 'CONTACT US';
+});
+contactText.addEventListener('mouseleave', (e) => {
+  e.target.textContent = "LET'S TALK";
+});
+
+let contactOverlayIsOpen = false;
+contactText.addEventListener('click', (e) => {
+  contactOverlayIsOpen = !contactOverlayIsOpen;
+  if (contactOverlayIsOpen) {
+    e.target.textContent = 'CONTACT US';
+    contactFormOverlay.style.top = '0%';
+  } else {
+    e.target.textContent = "LET'S TALK";
+    contactFormOverlay.style.top = '-100%';
+  }
 });

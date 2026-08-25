@@ -9,6 +9,7 @@
  * @example
  * const user = 90
  */
+
 function greet(username, age) {}
 
 greet();

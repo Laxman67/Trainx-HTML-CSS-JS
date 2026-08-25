@@ -83,8 +83,11 @@ body {
   /* FIXME:  */
   /* background-color: red; */
 }
-#menu {
+#menu,
+#contact {
   transition: all 0.5s ease;
+}
+#menu {
   width: 70px;
   /* FIXME:  */
   /* background-color: green; */
@@ -133,6 +136,7 @@ body {
   /* FIXME: */
   /* color: red; */
   /* background-color: green; */
+  overflow: hidden;
 }
 .overlay-menus {
   margin-left: 2rem;
@@ -155,8 +159,6 @@ body {
   transition: all 0.3s ease-in-out;
   /* TODO: Apply Translate Effect
    */
-
-  overflow: hidden;
 }
 .overlay-item h3 {
   translate: -100% 100%;
@@ -244,4 +246,41 @@ body {
 }
 .image-highlight {
   border-radius: 5%;
+}
+
+/* Contact Overlay  */
+#contact-form-overlay {
+  /* display: flex; */
+  align-items: center;
+  padding: 4rem;
+  gap: 15rem;
+  font-family: 'Bebas Neue', sans-serif;
+  width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: -100%;
+  transition: all 0.3s ease;
+  background-color: salmon;
+  overflow: hidden;
+}
+
+#contact-form-overlay h1 {
+  font-size: 9rem;
+  line-height: 8rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+input,
+::placeholder {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #c9c9c9;
 }
