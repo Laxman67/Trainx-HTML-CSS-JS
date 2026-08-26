@@ -184,13 +184,19 @@ contactText.addEventListener('mouseleave', (e) => {
 });
 
 let contactOverlayIsOpen = false;
+
 contactText.addEventListener('click', (e) => {
   contactOverlayIsOpen = !contactOverlayIsOpen;
   if (contactOverlayIsOpen) {
     e.target.textContent = 'CONTACT US';
     contactFormOverlay.style.top = '0%';
+
+    document.querySelector('#contact-form-image-container img').style.width =
+      '250px';
   } else {
     e.target.textContent = "LET'S TALK";
     contactFormOverlay.style.top = '-100%';
+    document.querySelector('#contact-form-image-container img').style.width =
+      '0px';
   }
 });
