@@ -20,5 +20,42 @@
     "Vododra"
   ],
   "liveServer.settings.port": 5501,
-  "livePreview.defaultPreviewPath": "/16.DOM/Events/index.html"
+  "livePreview.defaultPreviewPath": "/16.DOM/Events/index.html",
+  "todohighlight.keywords": [
+    {
+      "text": "TODO:",
+      "color": "#1f2937",
+      "backgroundColor": "#fde68b"
+    },
+    {
+      "text": "TODO+",
+      "color": "#ffffff",
+      "backgroundColor": "#d97706"
+    },
+    {
+      "text": "BUG:",
+      "color": "#ffffff",
+      "backgroundColor": "#dc2626"
+    },
+    {
+      "text": "REVIEW:",
+      "color": "#ffffff",
+      "backgroundColor": "#2563eb"
+    },
+    {
+      "text": "FIXME:",
+      "color": "#ffffff",
+      "backgroundColor": "#7c3aed"
+    },
+    {
+      "text": "NOTE:",
+      "color": "#1f2937",
+      "backgroundColor": "#a7f3d0"
+    },
+    {
+      "text": "LINK:",
+      "color": "#ffffff",
+      "backgroundColor": "blue"
+    }
+  ]
 }

@@ -184,7 +184,7 @@ body {
   background-size: contain;
 }
 
-/* PopOut Area */
+/* NOTE: PopOut Area */
 
 .popout-area {
   display: flex;
@@ -219,7 +219,6 @@ body {
 .highlight {
   text-decoration: underline;
   position: relative;
-  display: inline-block;
 }
 .highlight img {
   width: auto;
@@ -228,7 +227,7 @@ body {
 
   opacity: 0;
   position: absolute;
-  bottom: -50px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%) translateY(50px);
   z-index: 2;
@@ -246,6 +245,8 @@ body {
 }
 .image-highlight {
   border-radius: 5%;
+  transition: all 0.5s ease-in-out;
+  bottom: 0px;
 }
 
 /* Contact Overlay  */
@@ -258,16 +259,15 @@ body {
   width: 100vw;
   height: 100%;
   position: absolute;
-  /* FIXME: Close krna hai ... if working fine */
-  top: 0%;
+  top: -100%;
   transition: all 0.3s ease-in-out;
   background-color: #c9c9c9;
   overflow: hidden;
 }
 
 #contact-form-image-container img {
-  height: 7rem;
-  width: auto;
+  width: 0px;
+  height: auto;
   border-radius: 10px;
   width: 0px;
   transition: all 1s ease-in-out;
@@ -281,12 +281,21 @@ body {
 
 /* FORM INPUT FIELDS */
 
+form {
+  margin-top: 3rem;
+}
 .from-input-boxes {
   display: flex;
   gap: 2rem;
   align-items: start;
+  margin-top: 20px;
 }
 
+label {
+  font-family: 'Inter';
+  font-weight: 300;
+  text-transform: uppercase;
+}
 input {
   outline: none;
   border: none;
@@ -297,16 +306,38 @@ input {
 input,
 ::placeholder {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: #b0abab;
-
   width: 100%;
-  /* letter-spacing: px; */
-  /* word-spacing: 6px; */
-  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: -3px;
+  word-spacing: 6px;
 }
 
 input {
   height: 45px;
+}
+
+.interest-options {
+  display: flex;
+  gap: 2rem;
+  color: #c9c9c9;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.interest-option-items {
+  display: flex;
+  gap: 1.6rem;
+  padding: 0px 10px;
+  background-color: #b0abab;
+  border-radius: 7px;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.active {
+  background-color: black;
+  color: white;
 }

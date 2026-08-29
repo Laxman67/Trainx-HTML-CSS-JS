@@ -129,51 +129,6 @@ overlayMenus.addEventListener('mouseleave', (e) => {
   cursorBox.style.display = 'block';
 });
 
-// PopOut Area
-
-let highlights = document.querySelectorAll('.highlight');
-// debugger;
-highlights.forEach((highlight) => {
-  let images = highlight.querySelectorAll('img');
-  if (!images.length) return;
-
-  let idx = 0;
-  let zIndex = images.length;
-  let interval = null;
-
-  highlight.addEventListener('mouseenter', () => {
-    if (interval) return;
-    interval = setInterval(() => {
-      const current = images[idx % images.length];
-
-      if (idx < images.length) {
-        current.classList.add('show');
-        current.style.zIndex = ++zIndex;
-      } else {
-        current.classList.remove('show');
-        requestAnimationFrame(() => {
-          current.style.zIndex = ++zIndex;
-          requestAnimationFrame(() => {
-            current.classList.add('show');
-          });
-        });
-      }
-      idx++;
-    }, 300);
-  });
-
-  highlight.addEventListener('mouseleave', () => {
-    clearInterval(interval);
-    interval = null;
-    images.forEach((img) => {
-      img.classList.remove('show');
-      img.style.zIndex = '';
-    });
-    idx = 0;
-    zIndex = images.length;
-  });
-});
-
 // Overlays Contact Text
 
 contactText.addEventListener('mouseenter', (e) => {
@@ -190,7 +145,7 @@ contactText.addEventListener('click', (e) => {
   if (contactOverlayIsOpen) {
     e.target.textContent = 'CONTACT US';
     contactFormOverlay.style.top = '0%';
-
+    cursorBox.style.display = 'none';
     document.querySelector('#contact-form-image-container img').style.width =
       '250px';
   } else {
@@ -198,5 +153,82 @@ contactText.addEventListener('click', (e) => {
     contactFormOverlay.style.top = '-100%';
     document.querySelector('#contact-form-image-container img').style.width =
       '0px';
+    cursorBox.style.display = 'block';
   }
+});
+
+// PopUp Area
+//TODO: Explanation PopOut Area
+
+const ImageTriggersBox = document.querySelectorAll('.highlight');
+
+ImageTriggersBox.forEach((element) => {
+  let interval;
+  let index = 0;
+  //NOTE:
+  element.addEventListener('mouseenter', () => {
+    const images = element.querySelectorAll('.image-highlight');
+
+    // Start from the first image
+    index = 0;
+
+    images[index].style.opacity = '1';
+
+    interval = setInterval(() => {
+      // Hide current image
+      images[index].style.opacity = '0';
+
+      // TODO: Rotate
+
+      // if (index % 2 == 0) {
+      //   images[index].style.rotate = `${Math.random() * images.length}deg`;
+      //   images[index].style.bottom = `20px`;
+      // } else {
+      //   images[index].style.rotate = `-${Math.random() * images.length}deg`;
+      //   images[index].style.bottom = `20px`;
+      // }
+
+      // Move to next image
+      index++;
+
+      // Loop back to first image
+      if (index >= images.length) {
+        index = 0;
+      }
+
+      // Show next image
+      images[index].style.opacity = '1';
+    }, 300);
+  });
+
+  element.addEventListener('mouseleave', () => {
+    console.log(interval);
+
+    // Stop the loop
+    clearInterval(interval);
+
+    const images = element.querySelectorAll('.image-highlight');
+
+    // Hide all images
+    images.forEach((image) => {
+      image.style.opacity = '0';
+    });
+
+    index = 0;
+  });
+});
+
+// Interest Btns/Options
+
+let interestOptions = document.querySelectorAll('.interest-option-items');
+
+interestOptions.forEach((options) => {
+  options.addEventListener('click', (e) => {
+    // Remove from the existing One
+    interestOptions.forEach((option) => {
+      option.classList.remove('active');
+    });
+
+    e.target.classList.add('active');
+  });
 });
