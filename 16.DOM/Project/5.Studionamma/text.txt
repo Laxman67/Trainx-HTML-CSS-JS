@@ -1,0 +1,19 @@
+/* NOTE: */
+/* #grid-image-1 {
+  background-image: url(assets/grid-vedio-images/1.webp);
+  background-size: cover;
+} */
+
+/* #grid-image-2 {
+  background-image: url(assets/grid-vedio-images/2.webp);
+  background-size: cover;
+}
+#grid-image-3 {
+  background-image: url(assets/grid-vedio-images/3.webp);
+  background-size: cover;
+}
+#grid-image-4 {
+  background-image: url(assets/grid-vedio-images/4.webp);
+  background-size: cover;
+} */
+/* document.querySelectorAll('.main-video').forEach(el=>{console.log(el)}) */

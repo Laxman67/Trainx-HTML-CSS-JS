@@ -25,12 +25,17 @@
     {
       "text": "TODO:",
       "color": "#1f2937",
-      "backgroundColor": "#fde68b"
+      "backgroundColor": "#ffff00"
     },
     {
       "text": "TODO+",
       "color": "#ffffff",
       "backgroundColor": "#d97706"
+    },
+    {
+      "text": "DONE",
+      "color": "#ffffff",
+      "backgroundColor": "#008000"
     },
     {
       "text": "BUG:",
