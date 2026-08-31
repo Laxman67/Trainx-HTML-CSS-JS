@@ -76,6 +76,8 @@ body {
   font-weight: 900;
   line-height: 120px;
   text-align: center;
+  word-spacing: 20px;
+  letter-spacing: 5px;
 }
 #mode {
   /* cursor: pointer; */
@@ -353,20 +355,26 @@ input {
   margin-right: 0px;
   font-size: 10rem;
   font-family: 'Bebas Neue', sans-serif;
+  line-height: 10rem;
+  letter-spacing: 5px;
+  overflow: hidden;
 }
 
 #playground-item {
   position: absolute;
   font-size: 2rem;
-  top: 0px;
-  left: 0px;
+  top: -0px;
+  left: -200px;
   background-color: blue;
   color: white;
   border-radius: 6px;
+  letter-spacing: 2px;
+
   padding: 5px;
   transform: rotate(-5deg);
+  line-height: 2rem;
 
   /* TO add smooth effect */
   /* transition: all 0.2s ease-in; */
-  transition: all linear 0.2s;
+  transition: all linear 0.3s;
 }

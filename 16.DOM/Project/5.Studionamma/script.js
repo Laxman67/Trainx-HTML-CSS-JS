@@ -243,8 +243,8 @@ playgroundHeading.addEventListener('mousemove', (e) => {
   const { offsetX, offsetY } = e;
 
   // FIXME: Move Item
-  document.getElementById('playground-item').style.top = `${offsetY}px`;
-  document.getElementById('playground-item').style.left = `${offsetX}px`;
+  document.getElementById('playground-item').style.top = `${offsetY + 10}px`;
+  document.getElementById('playground-item').style.left = `${offsetX + 10}px`;
 });
 
 // Hide and Display Item
