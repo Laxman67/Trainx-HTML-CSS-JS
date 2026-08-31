@@ -338,3 +338,35 @@ input {
   background-color: black;
   color: white;
 }
+
+/* TODO: Playground */
+
+#playground {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#playground-heading {
+  /* padding: 1rem 2rem; */
+  position: relative;
+  margin-right: 0px;
+  font-size: 10rem;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+#playground-item {
+  position: absolute;
+  font-size: 2rem;
+  top: 0px;
+  left: 0px;
+  background-color: blue;
+  color: white;
+  border-radius: 6px;
+  padding: 5px;
+  transform: rotate(-5deg);
+
+  /* TO add smooth effect */
+  /* transition: all 0.2s ease-in; */
+  transition: all linear 0.2s;
+}

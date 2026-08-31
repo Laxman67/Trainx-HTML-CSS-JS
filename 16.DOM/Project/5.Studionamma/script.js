@@ -203,7 +203,7 @@ ImageTriggersBox.forEach((element) => {
 
   // NOTE: when mouseleave
   element.addEventListener('mouseleave', () => {
-    console.log(interval);
+    // console.log(interval);
 
     // Stop the loop
     clearInterval(interval);
@@ -232,4 +232,27 @@ interestOptions.forEach((options) => {
 
     e.target.classList.add('active');
   });
+});
+
+// TODO: Playgroud
+
+let playgroundHeading = document.getElementById('playground-heading');
+
+// MouseMove to move item
+playgroundHeading.addEventListener('mousemove', (e) => {
+  const { offsetX, offsetY } = e;
+
+  // FIXME: Move Item
+  document.getElementById('playground-item').style.top = `${offsetY}px`;
+  document.getElementById('playground-item').style.left = `${offsetX}px`;
+});
+
+// Hide and Display Item
+
+playgroundHeading.addEventListener('mouseleave', (e) => {
+  document.getElementById('playground-item').style.display = 'none';
+});
+
+playgroundHeading.addEventListener('mouseenter', (e) => {
+  document.getElementById('playground-item').style.display = 'block';
 });
