@@ -230,15 +230,12 @@ body {
   bottom: -20px;
   left: 50%;
   transform: translateX(-50%) translateY(50px);
-  z-index: 2;
-  pointer-events: none;
   transition:
     opacity 0.2s ease-in-out,
     transform 0.2s ease-in-out;
   border-radius: 5%;
 }
 .highlight img.show {
-  border-radius: 5%;
   opacity: 1;
   transform: translateX(-50%) translateY(0);
   animation: pop 1s ease;

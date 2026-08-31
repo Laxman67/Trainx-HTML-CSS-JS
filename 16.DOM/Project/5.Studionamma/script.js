@@ -165,7 +165,7 @@ const ImageTriggersBox = document.querySelectorAll('.highlight');
 ImageTriggersBox.forEach((element) => {
   let interval;
   let index = 0;
-  //NOTE:
+  //NOTE: When Mouseenter
   element.addEventListener('mouseenter', () => {
     const images = element.querySelectorAll('.image-highlight');
 
@@ -201,6 +201,7 @@ ImageTriggersBox.forEach((element) => {
     }, 300);
   });
 
+  // NOTE: when mouseleave
   element.addEventListener('mouseleave', () => {
     console.log(interval);
 
