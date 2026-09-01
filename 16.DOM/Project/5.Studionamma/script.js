@@ -262,6 +262,8 @@ playgroundHeading.addEventListener('mouseenter', (e) => {
 let gridVedioItems = document.querySelectorAll('.grid-vedio-items');
 
 gridVedioItems.forEach((item) => {
+  const follower = item.querySelector('.vedio-item-follower');
+
   item.addEventListener('mouseenter', (e) => {
     e.target.style.transform = 'scale(.95)';
     e.target.firstElementChild.style.filter = 'blur(5px)';
@@ -270,14 +272,12 @@ gridVedioItems.forEach((item) => {
 
   item.addEventListener('mouseleave', (e) => {
     e.target.style.transform = 'scale(1)';
-
     e.target.firstElementChild.style.filter = 'blur(0px)';
     e.target.lastElementChild.style.display = 'none';
   });
 
   // Follower
   item.addEventListener('mousemove', (e) => {
-    const follower = item.querySelector('.vedio-item-follower');
     follower.style.display = 'block';
     follower.style.top = `${e.offsentX}px`;
     follower.style.left = `${e.offsetY}px`;
