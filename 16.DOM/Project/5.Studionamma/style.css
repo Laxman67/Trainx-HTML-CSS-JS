@@ -197,6 +197,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #e4e4e4;
+
   /* FIXME: Remove After all set */
   /* position: relative; */
 }
@@ -232,15 +233,13 @@ body {
   bottom: -20px;
   left: 50%;
   transform: translateX(-50%) translateY(50px);
-  transition:
-    opacity 0.2s ease-in-out,
-    transform 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border-radius: 5%;
 }
 .highlight img.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
-  animation: pop 1s ease;
+  animation: pop 0.5s ease;
 }
 .image-highlight {
   border-radius: 5%;
@@ -380,6 +379,51 @@ input {
 }
 
 /* TODO:  Grid Vedio Boxes*/
+#grid-vedio-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 100vh;
+  margin-top: 10rem;
+  gap: 2rem;
+}
 
+.grid-vedio-items {
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.1s linear;
+}
+
+.grid-vedio-items img {
+  width: 100%;
+  position: absolute;
+}
+
+.grid-vedio-items video {
+  border-radius: 10px;
+  z-index: 100000;
+  width: 80%;
+  display: none;
+}
 /* Images and Vedio Links */
 /* https://drive.google.com/drive/folders/1_4j6Tie-B4NgyCgiFbzp2xzaMxwBzdT5?usp=sharing */
+
+/* Vedio Span Followe */
+.vedio-item-follower {
+  position: absolute;
+  font-size: 2rem;
+  display: none;
+  background-color: blue;
+  color: white;
+  border-radius: 6px;
+  z-index: 90000000;
+  padding: 5px;
+
+  /* TO add smooth effect */
+  /* transition: all 0.2s ease-in; */
+  transition: all linear 0.3s;
+}

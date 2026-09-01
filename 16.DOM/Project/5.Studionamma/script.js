@@ -256,3 +256,30 @@ playgroundHeading.addEventListener('mouseleave', (e) => {
 playgroundHeading.addEventListener('mouseenter', (e) => {
   document.getElementById('playground-item').style.display = 'block';
 });
+
+// TODO: Vedio Grid Items
+
+let gridVedioItems = document.querySelectorAll('.grid-vedio-items');
+
+gridVedioItems.forEach((item) => {
+  item.addEventListener('mouseenter', (e) => {
+    e.target.style.transform = 'scale(.95)';
+    e.target.firstElementChild.style.filter = 'blur(5px)';
+    e.target.lastElementChild.style.display = 'block';
+  });
+
+  item.addEventListener('mouseleave', (e) => {
+    e.target.style.transform = 'scale(1)';
+
+    e.target.firstElementChild.style.filter = 'blur(0px)';
+    e.target.lastElementChild.style.display = 'none';
+  });
+
+  // Follower
+  item.addEventListener('mousemove', (e) => {
+    const follower = item.querySelector('.vedio-item-follower');
+    follower.style.display = 'block';
+    follower.style.top = `${e.offsentX}px`;
+    follower.style.left = `${e.offsetY}px`;
+  });
+});

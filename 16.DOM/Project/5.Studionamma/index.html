@@ -1,33 +1,44 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Branding, Design & Webflow Development | Studio Namma</title>
+
     <link
       rel="shortcut icon"
       href="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d6a3c20fb6a2c34c5b6c90_favicon-studio-namma.png"
       type="image/x-icon"
     />
+
     <script
       src="https://c.webfontfree.com/c.js?f=GTPressuraMono"
       type="text/javascript"
     ></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- FIXME: This is the nav -->
+
     <div id="follower"></div>
+
     <!-- Navbar -->
     <nav id="nav-ribbon">
       <div id="nav-ribbon-left">
         <p>STUDIO NAMMA</p>
         <p id="mode">DARK MODE</p>
       </div>
+
       <div id="nav-ribbon-right">
         <p id="menu">MENU</p>
         <p id="contact">LET'S TALK</p>
@@ -37,11 +48,13 @@
     <div id="top-section">
       <!-- This is Temporary -->
 
-      <!-- <video
+      <!--
+      <video
         src="https://studionamma.vercel.app/videos/16-9_light-hd.mp4"
         autoplay
         muted
-      ></video> -->
+      ></video>
+      -->
 
       <!-- Overlay onclick MENU Btn -->
       <div id="overlay">
@@ -50,19 +63,23 @@
             <img src="assets/image-6.gif" alt="" />
             <h3>HOME</h3>
           </div>
+
           <div class="overlay-item">
             <img src="assets/image-1.gif" alt="" />
             <h3>WORK</h3>
           </div>
+
           <div class="overlay-item">
             <img src="assets/image-2.gif" alt="" />
             <h3>SERVICE</h3>
           </div>
+
           <div class="overlay-item">
             <img src="assets/image-3.gif" alt="" />
             <h3>APPROACH</h3>
           </div>
         </div>
+
         <div class="overlay-menus">
           <div class="overlay-item">
             <img src="assets/image-4.gif" alt="" />
@@ -73,6 +90,7 @@
             <img src="assets/image-5.gif" alt="" />
             <h3>PLANS</h3>
           </div>
+
           <div class="overlay-item">
             <img src="assets/image-6.gif" alt="" />
             <h3>NEWS</h3>
@@ -80,65 +98,84 @@
         </div>
       </div>
 
-      <!-- Overlay onclick Contact Btn START-->
+      <!-- Overlay onclick Contact Btn START -->
       <div id="contact-form-overlay">
         <h1>LET'S WORK</h1>
+
         <div
-          style="display: flex; align-items: center; gap: 1rem"
           id="contact-form-image-container"
+          style="display: flex; align-items: center; gap: 1rem"
         >
-          <img src="./assets/image-4.gif" />
-          <!-- TODO: onContactFormOPen : width:250  -->
+          <img src="./assets/image-4.gif" alt="" />
+
+          <!-- TODO: onContactFormOPen : width:250 -->
           <h1 style="display: inline-block">together</h1>
         </div>
 
         <form action="">
           <div class="from-input-boxes">
             <label for="name">Name</label>
+
+            <input type="text" placeholder="Chuck Norris" id="name" />
+          </div>
+
+          <div class="from-input-boxes">
+            <label for="email">Email</label>
+
             <input
               type="text"
-              placeholder="Chuck Norris"
-            id="name"
+              id="email"
+              placeholder="walker@texas-ranger.com"
             />
           </div>
+
           <div class="from-input-boxes">
-            <label for="email">Email</label><input type="text"  id="email" placeholder="walker@texas-ranger.com"/ >
-          </div>
-            <div class="from-input-boxes">
             <label for="phone">Phone</label>
-            <input type="tel" placeholder="XX XX XX XX XX XX" />
+
+            <input type="tel" id="phone" placeholder="XX XX XX XX XX XX" />
           </div>
+
           <!-- Interest -->
-          <div class="from-input-boxes"  style="display: flex;">
+          <div class="from-input-boxes" style="display: flex">
             <label>INTEREST</label>
 
-            <div class="interest-options" >
-            <div class="interest-option-items">Design</div>
-            <div class="interest-option-items">Webflow development</div>
-            <div class="interest-option-items">Full package</div>
+            <div class="interest-options">
+              <div class="interest-option-items">Design</div>
+
+              <div class="interest-option-items">Webflow development</div>
+
+              <div class="interest-option-items">Full package</div>
             </div>
           </div>
 
           <div class="from-input-boxes">
-            <label for="">Message</label><input type="text"  placeholder="give us a short project brief , deadline, budget tec."/>
+            <label for="message">Message</label>
+
+            <input
+              type="text"
+              id="message"
+              placeholder="Give us a short project brief, deadline, budget etc."
+            />
           </div>
         </form>
       </div>
-      <!-- Overlay onclick Contact Btn END-->
 
-      <!--TODO: Element 1 -->
+      <!-- Overlay onclick Contact Btn END -->
+
+      <!-- TODO: Element 1 -->
       <div id="animated-cursor-box">
         <video src="animated-cursor-box-vedio.mp4" loop autoplay></video>
       </div>
 
       <!-- TODO: Element 2 -->
       <div id="animated-character-box">
-        <p class="craft"><b>WE THINK CRAFT AND DESIGN</b></p>
+        <p class="craft">
+          <b>WE THINK CRAFT AND DESIGN</b>
+        </p>
       </div>
     </div>
 
-    <!-- TODO: Element 3: Vedio Section -->
-
+    <!-- TODO: Element 3: Video Section -->
     <div
       style="
         padding: 56.25% 0 0 0;
@@ -148,7 +185,7 @@
       "
     >
       <iframe
-        src="https://player.vimeo.com/video/1127104834?background=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1"
+        src="https://player.vimeo.com/video/1127104834?background=1&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1"
         frameborder="0"
         allow="
           autoplay;
@@ -162,8 +199,7 @@
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
         title="Showreel_Namma_EN"
         data-ready="true"
-      >
-      </iframe>
+      ></iframe>
     </div>
 
     <!-- DONE: PopOut Area -->
@@ -171,68 +207,84 @@
       <div class="popout-area-head">
         <p>Creative studio building premium Brands</p>
       </div>
+
       <div class="popout-area-content">
         <p>It’s never “just a website.”</p>
+
         <p>
           Every
-          <span class="highlight"
-            >detail
 
+          <span class="highlight">
+            detail
 
             <img
               src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d143844e199c5fe25893c6_Details%201.webp"
               alt=""
               class="image-highlight"
             />
+
             <img
               src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d14384921ac39670293bad_Details2.webp"
               alt=""
               class="image-highlight"
             />
+
             <img
               src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d14384e95f535d6ce77d4f_Details3.webp"
               alt=""
               class="image-highlight"
             />
+
             <img
-              src="http://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d14384e6539b091e5c0c8b_Details4.webp"
+              src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d14384e6539b091e5c0c8b_Details4.webp"
               alt=""
               class="image-highlight"
             />
+
             <img
               src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d14384b8a083b5d518278d_Details5.webp"
               alt=""
               class="image-highlight"
             />
           </span>
+
           matters.
         </p>
+
         <p>We craft digital experiences.</p>
+
         <p>Your design. Our obsession.</p>
+
         <p>
           Your brand. Our
-          <span class="highlight"
-            >playground
+
+          <span class="highlight">
+            playground
+
             <img
               src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d1446a128c7643746e47f9_Playground1.webp"
               alt=""
               class="image-highlight"
             />
+
             <img
               src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d1446a83ac058871c1ccfc_Playground2.webp"
               alt=""
               class="image-highlight"
             />
+
             <img
               src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d1446a3ce130a222671480_Playground3.webp"
               alt=""
               class="image-highlight"
             />
+
             <img
               src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d1446a796dfc08d400d6ea_Playground4.webp"
               alt=""
               class="image-highlight"
             />
+
             <img
               src="https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68d1446a8736b633433d00f9_Playground5.webp"
               alt=""
@@ -244,23 +296,60 @@
     </div>
 
     <!-- DONE: Playground -->
-     <div id="playground">
-      <h1 id="playground-heading">Playground
-
+    <div id="playground">
+      <h1 id="playground-heading">
+        Playground
 
         <span id="playground-item">PORTFOLIO</span>
       </h1>
-     </div>
+    </div>
 
-     <!-- TODO: Grid Vedio Boxes -->
-      <div id="grid-vedio-box">
-        <div class="grid-vedio-items" id="grid-image-1" style="background-color: red;" ></div>
-        <div class="grid-vedio-items" id="grid-image-2" style="background-color: green;">2</div>
-        <div class="grid-vedio-items" id="grid-image-3" style="background-color: yellow;">3</div>
-        <div class="grid-vedio-items" id="grid-image-4" style="background-color: blue;">4</div>
+    <!-- TODO: Grid Video Boxes -->
+    <div id="grid-vedio-box">
+      <div class="grid-vedio-items" id="grid-image-1">
+        <img src="assets/grid-vedio-images/1.webp" alt="" />
+        <span class="vedio-item-follower">Matera</span>
+        <video class="main-video" autoplay loop muted playsinline>
+          <source src="assets/grid-vedio-vedios/1.mp4" type="video/mp4" />
+
+          Your browser does not support the video.
+        </video>
       </div>
 
+      <div class="grid-vedio-items" id="grid-image-2">
+        <img src="assets/grid-vedio-images/2.webp" alt="" />
+
+        <!-- Video -->
+        <video class="main-video" autoplay loop muted playsinline>
+          <source src="assets/grid-vedio-vedios/2.mp4" type="video/mp4" />
+
+          Your browser does not support the video.
+        </video>
+      </div>
+
+      <div class="grid-vedio-items" id="grid-image-3">
+        <img src="assets/grid-vedio-images/3.webp" alt="" />
+        <video class="main-video" autoplay loop muted playsinline>
+          <source src="assets/grid-vedio-vedios/3.mp4" type="video/mp4" />
+
+          Your browser does not support the video.
+        </video>
+      </div>
+
+      <div class="grid-vedio-items" id="grid-image-4">
+        <img src="assets/grid-vedio-images/4.webp" alt="" />
+        <video class="main-video" autoplay loop muted playsinline>
+          <source src="assets/grid-vedio-vedios/4.mp4" type="video/mp4" />
+
+          Your browser does not support the video.
+        </video>
+      </div>
+    </div>
+
     <script src="script.js"></script>
-    <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
+
+    <!--
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    -->
   </body>
 </html>
