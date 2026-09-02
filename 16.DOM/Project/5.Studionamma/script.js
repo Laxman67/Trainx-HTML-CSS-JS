@@ -274,12 +274,18 @@ gridVedioItems.forEach((item) => {
     e.target.style.transform = 'scale(1)';
     e.target.firstElementChild.style.filter = 'blur(0px)';
     e.target.lastElementChild.style.display = 'none';
+    follower.style.display = 'none';
   });
 
   // Follower
   item.addEventListener('mousemove', (e) => {
     follower.style.display = 'block';
-    follower.style.top = `${e.offsentX}px`;
-    follower.style.left = `${e.offsetY}px`;
+    const rect = item.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    follower.style.left = `${x}px`;
+    follower.style.top = `${y}px`;
   });
 });

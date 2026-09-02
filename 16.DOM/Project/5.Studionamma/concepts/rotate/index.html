@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: gilroy, sans-serif;
+      }
+
+      html,
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      #container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 500px);
+        grid-auto-rows: 80vh;
+        background-color: pink;
+        justify-content: center;
+        max-width: 0 auto;
+      }
+      .items {
+        margin: 1rem;
+        border-radius: 1rem;
+        transition: all linear 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="items" id="item-1" style="background-color: red">1</div>
+      <div class="items" id="item-2" style="background-color: rgb(57, 19, 114)">
+        2
+      </div>
+      <div class="items" id="item-3" style="background-color: rgb(225, 236, 5)">
+        3
+      </div>
+      <div class="items" id="item-4" style="background-color: rgb(40, 7, 223)">
+        4
+      </div>
+    </div>
+    <script>
+      const rotateItems = document.querySelectorAll('.items');
+    </script>
+  </body>
+</html>
+
+/* #item-1, #item-3 { } #item-2, #item-4 { } */ /* rotate: -50deg; translate:
+-300px; */

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #item {
+        width: 200px;
+        height: 300px;
+        background-color: red;
+        /* NOTE: */
+        /* This item is not position based on body
+        relative position*/
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        /* FLEX */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .follower {
+        width: 30px;
+        height: 30px;
+        background: blue;
+        position: absolute;
+        border-radius: 50%;
+        top: 10px;
+        left: 10px;
+        transition: all linear 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="item">
+      <div class="follower"></div>
+
+      <!-- NOTE:  another ITEM-->
+      <div
+        class="child"
+        style="background-color: yellow; width: 100px; height: 100px"
+      ></div>
+    </div>
+    <script>
+      const container = document.getElementById('item');
+      const follower = document.querySelector('.follower');
+
+      container.addEventListener('mousemove', (e) => {
+        console.log(container.getBoundingClientRect());
+
+        follower.style.left = `${e.offsetX}px`;
+        follower.style.top = `${e.offsetY}px`;
+      });
+    </script>
+  </body>
+</html>

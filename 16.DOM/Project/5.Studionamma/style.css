@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@font-face {
+  font-family: 'GT Pressura Mono';
+  src: url('./assets/fonts/GT\ Pressura\ Mono\ Light\ Web.ttf') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -205,7 +210,7 @@ body {
   font-size: 1rem;
   /* To capitalize the text */
   text-transform: uppercase;
-  font-family: 'GT Pressura Mono Light';
+  font-family: 'GT Pressura Mono';
   font-weight: 500;
   letter-spacing: 2px;
   margin-top: 5rem;
@@ -414,16 +419,17 @@ input {
 
 /* Vedio Span Followe */
 .vedio-item-follower {
-  position: absolute;
   font-size: 2rem;
-  display: none;
+
   background-color: blue;
   color: white;
   border-radius: 6px;
   z-index: 90000000;
   padding: 5px;
+  font-family: 'Bebas Neue', sans-serif;
+  position: absolute;
+  display: none;
+  transform: rotate(-5deg);
 
-  /* TO add smooth effect */
-  /* transition: all 0.2s ease-in; */
   transition: all linear 0.3s;
 }
