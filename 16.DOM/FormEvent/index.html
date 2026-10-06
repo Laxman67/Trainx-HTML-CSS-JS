@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Events</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <input type="text" required id="name" />
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <script>
+      const input = document.getElementById('name');
+
+      input.addEventListener('blur', (e) => {
+        console.log('blur');
+      });
+      input.addEventListener('focus', (e) => {
+        console.log('focus');
+      });
+      input.addEventListener('input', (e) => {
+        console.log('input');
+      });
+      input.addEventListener('change', (e) => {
+        console.log('change');
+      });
+    </script>
+  </body>
+</html>

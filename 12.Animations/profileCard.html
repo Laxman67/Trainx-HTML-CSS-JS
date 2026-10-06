@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <style>
+      #container {
+        width: 400px;
+        /* height: 600px; */
+        background-color: rgb(213, 120, 213);
+        padding: 10%;
+      }
+
+      #card-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* overflow: hidden; */
+        width: 60%;
+        margin: auto;
+        top: -60px;
+      }
+
+      #image-box img {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 3rem;
+      }
+      .status-icon {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(7, 180, 7);
+        border-radius: 50%;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        animation: blink 0.6s ease infinite;
+      }
+      @keyframes blink {
+        from {
+          background-color: rgb(7, 180, 7);
+        }
+        to {
+          background-color: rgb(12, 111, 12);
+        }
+      }
+      #card-bottom {
+        width: 80%;
+        margin: auto;
+      }
+      #card-bottom div {
+        text-align: center;
+      }
+      #stats {
+        /* width:; */
+        width: 50%;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      #buttons {
+        display: flex;
+        justify-content: space-around;
+      }
+      #buttons > button {
+        padding: 0.5rem 0.6rem;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+      }
+      #follow-btn {
+        background-color: purple;
+        color: white;
+      }
+      #card {
+        padding: 20px;
+        background-color: white;
+        border-radius: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="container">
+      <div id="card">
+        <div id="card-top">
+          <section id="image-box">
+            <img
+              src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg"
+              alt=""
+            />
+            <div class="status-icon"></div>
+          </section>
+        </div>
+        <div id="card-bottom">
+          <div>
+            <h3>Sophia Cater</h3>
+            <p>Full Stack Developer</p>
+          </div>
+          <div id="stats">
+            <div>
+              <h4>100</h4>
+              <p>Posts</p>
+            </div>
+            <div>
+              <h4>940k</h4>
+              <p>Followers</p>
+            </div>
+            <div>
+              <h4>185</h4>
+              <p>Following</p>
+            </div>
+          </div>
+          <div id="buttons">
+            <button id="follow-btn">Follow</button>
+            <button id="msg-btn">Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

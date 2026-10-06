@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events In DOM</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 400px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 100;
+        transition:
+          left 0.1s linear,
+          top 0.1s linear;
+      }
+    </style>
+  </head>
+
+  <!-- onload="pageLoad()" -->
+  <body>
+    <div id="container">
+      <li id="event-btn">Item 1</li>
+      <li onclick="console.log(this)">Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </div>
+    <button id="addEventBtn">Click to make BG-Color (Red)</button>
+    <button id="">Event</button>
+    <div id="box"></div>
+    <!-- <button id="btn" onclick="makeBgRed(this)">
+      Click to make BG-Color (Red)
+    </button> -->
+
+    <!-- <button
+      id="btn"
+      onclick="
+        let Item3 = document.getElementById('container').children[1];
+
+        Item3.style.backgroundColor = 'red';
+      "
+    >
+      Click to make BG-Color (Red)
+    </button> -->
+
+    <script>
+      document.addEventListener('mousemove', (e) => {
+        console.log(e);
+
+        let moveBox = document.getElementById('box');
+        moveBox.style.cssText = `
+        left: ${e.clientX + 20}px;
+        top: ${e.clientY + 20}px;
+  `;
+      });
+
+      document
+        .getElementById('addEventBtn')
+        .addEventListener('click', function () {
+          let Item3 = document.getElementById('container').children[0];
+
+          Item3.style.backgroundColor = 'red';
+        });
+
+      // function pageLoad() {
+      //   alert('Page Loaded Successfully!');
+      // }
+
+      // function makeBgRed(e) {
+      //   console.log(e);
+
+      //   let Item3 = document.getElementById('container').children[0];
+
+      //   Item3.style.backgroundColor = 'red';
+      // }
+    </script>
+  </body>
+</html>

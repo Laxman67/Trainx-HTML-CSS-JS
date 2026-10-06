@@ -1,0 +1,84 @@
+what is CSS Grid
+
+CSS grid is a two dimensional layout model that arrange
+items in rows and columns
+
+Grid has to main components
+1. Grid Container (Parent)
+2. Grid Items  (Direct Children)
+
+Grid also have two axis
+1. columns axis (y)
+2. row axis (x)
+
+*Grid is divided into  grid cells by grid lines
+
+* Grid Lines defines grid tracks (Rows and Columns)
+* Grid Columns and Rows have SPACING between them called grid lines
+
+
+we've covered display Properties
+{
+  display : ?
+}
+
+1.Block
+2.Inline
+3.Inline-block
+4.Flex
+5.Grid
+6.
+
+
+Grid Container Properties
+1. Grid Template Column and Rows
+2. Fractional Unit
+3. Repeat Function
+
+
+Note: Grid Items will display in single column by default
+display: grid
+
+
+
+Property
+
+1. Grid Template Column:  Defines the NUMBER OF Columns and Width
+
+grid-template-column: 200px 100px 300px
+
+No. of columns : 3
+
+2. Grid Template Rows : Sets the number of rows and height of each
+grid-template-rows: 200px
+
+
+
+
+=========== 4-6-2026 =============
+
+grid-template-column :  200px 100px auto;
+grid-template-columns: 1fr 2fr 1fr;
+grid-template-rows: 1fr 2fr 1fr;
+grid-template-columns: repeat(3, 300px);
+grid-template-columns: repeat(auto-fill, 200px);
+auto-fill :  add extra columns when space available
+
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+Fit the columns based on the minmax() func.
+auto-fit: fits the cells into width
+
+
+
+grid-auto-columns: 300px;
+grid-auto-flow: column;
+overflow-x: scroll;
+
+
+Website 1:  https://curioos.giantart.com/?_ab=0&_fd=0&_sc=1&pb=0
+Website 2 : https://www.grundini.com/
+
+
+https://chromewebstore.google.com/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp
+https://chromewebstore.google.com/detail/download-all-images/nnffbdeachhbpfapjklmpnmjcgamcdmm
+https://chromewebstore.google.com/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh

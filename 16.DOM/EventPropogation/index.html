@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Code for Propagation */
+      #grand-parent {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(213, 37, 37);
+      }
+      #parent {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(200, 119, 119);
+      }
+      #child {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(162, 223, 7);
+      }
+      #grand-child {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(10, 187, 206);
+      }
+      #grand-parent,
+      #parent,
+      #child,
+      #grand-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Another Example</h3>
+    <div id="grand-parent">
+      <div id="parent">
+        <div id="child">
+          <div id="grand-child"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link Example -->
+
+    <h3>Here is the Link</h3>
+    <a href="https://github.com/Laxman67">Click Here </a>
+    <script>
+      let grandParent = document.getElementById('grand-parent');
+      grandParent.addEventListener('click', () => {
+        console.log('Grand Parent is Clicked');
+      });
+
+      let parent = document.getElementById('parent');
+      parent.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('Parent  is Clicked');
+      });
+
+      let child = document.getElementById('child');
+      child.addEventListener('click', (e) => {
+        e.stopImmediatePropagation();
+
+        console.log(e.type);
+        console.log(e.target.parentElement.parentElement.parentElement);
+      });
+
+      child.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('child:2nd   is Clicked');
+      });
+
+      let grandChild = document.getElementById('grand-child');
+      grandChild.addEventListener('click', (e) => {
+        console.log('grandChild is Clicked: ONE');
+      });
+
+      // grandChild.addEventListener('click', () => {
+      //   console.log('grandChild is Clicked: TWO');
+      // });
+
+      // e.prevent link Example
+
+      document.getElementsByTagName('a')[0].addEventListener(
+        'click',
+        () => {
+          console.log('Link Clicked');
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

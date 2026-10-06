@@ -1,5 +1,5 @@
 What is Flexbox:
-Flexbox Box model is a one dimensional layout model that provides a method to align and arrange element in a very effective ways ( ROWS and COlUMNS) - One at a time
+Flexbox Box model is a one dimensional (1-D) layout model that provides a method to align and arrange element in a very effective ways ( ROWS and COlUMNS) - One at a time
 
 ===== Flexbox Container and Flex items =====
 Flexbox Container: Its is a element that holds flex items, where flex items are DIRECT children of flex Container

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 800;
+        background-color: red;
+        border-radius: 20px;
+        padding: 10px;
+      }
+      .blue {
+        font-size: 1.5rem;
+        font-weight: 800;
+        background-color: blue;
+        border-radius: 20px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="c1 c2 c3">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos reiciendis
+      atque quod repudiandae maxime, optio suscipit voluptate fugiat tenetur
+      sapiente dignissimos.
+    </p>
+    <script>
+      let para = document.getElementsByTagName('p')[0];
+      // style Property
+      // para.style.backgroundColor = 'red';
+      // para.style.padding = '2px 10px ';
+      // para.style.fontSize = '1.5rem';
+
+      // style.cssText
+      // para.classList.add('red');
+      // para.classList.remove('c1');
+      // para.classList.replace('red', 'blue');
+      // console.log(para.classList.contains('blue'));
+      para.classList.toggle('red');
+      console.log(para.classList);
+    </script>
+  </body>
+</html>

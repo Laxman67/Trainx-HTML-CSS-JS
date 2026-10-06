@@ -1,0 +1,25 @@
+ Mouse Events
+1. click:	Fired when an element is clicked.
+2. dblclick:	Fired when an element is double-clicked.
+3. mousedown:	Mouse button is pressed.
+4. mouseup:	Mouse button is released.
+5. mousemove:	Mouse moves over an element.
+6. mouseenter:	Mouse enters an element (doesn't bubble).
+7. mouseleave:	Mouse leaves an element (doesn't bubble).
+8. mouseover:	Mouse enters an element (bubbles).
+9  mouseout:	Mouse leaves an element (bubbles).
+10 .contextmenu: Right-click on an element.
+
+
+Form Events
+
+submit:	Form is submitted.
+change:	Value changes after losing focus (or immediately for some controls).
+input:	Fires every time the value changes.
+focus:	Element gains focus.
+blur:	Element loses focus.
+reset:	Form is reset.
+
+Keywords Events
+keydown
+keyup

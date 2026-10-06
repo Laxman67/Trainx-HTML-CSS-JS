@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing Board</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #c7d3c0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        gap: 20px;
+      }
+
+      #drawing-board {
+        width: 75vw;
+        height: 75vh;
+        background: #e8f5e9;
+        border: 2px solid gray;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .drawing {
+        width: 10px;
+        height: 10px;
+        background: red;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .controls {
+        width: 75vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 20px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .control-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      button {
+        padding: 8px 18px;
+        border: none;
+        border-radius: 8px;
+        background: #ef5350;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      button:hover {
+        background: #d32f2f;
+      }
+
+      input[type='range'] {
+        width: 180px;
+        cursor: pointer;
+      }
+
+      input[type='color'] {
+        width: 40px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        background: none;
+      }
+      #theme-box {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      #dark-theme {
+        background-color: black;
+        color: white;
+      }
+      #light-theme {
+        background-color: white;
+        color: black;
+      }
+      #black-white {
+        background-color: rgb(100, 100, 106);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="theme-box">
+      <span>Change Theme based : </span>
+      <button id="dark-theme">Dark</button>
+      <button id="light-theme">Light</button>
+      <button id="black-white">Black and White</button>
+    </div>
+    <div id="drawing-board"></div>
+
+    <div class="controls">
+      <button id="clear-board">Clear</button>
+
+      <div class="control-group">
+        <strong>Brush Size</strong>
+        <input type="range" id="slider" min="0" max="50" value="10" />
+      </div>
+
+      <div class="control-group">
+        <label for="colorPicker"><strong>Color</strong></label>
+        <input type="color" id="colorPicker" value="#ff0000" />
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let drawing = false;
+  const colorPicker = document.getElementById('colorPicker');
+  let silder = document.getElementById('slider');
+  let board = document.getElementById('drawing-board');
+  let brushColor = 'red';
+  let brushSize = 10;
+  //   Theme Changer Buttons
+  // 1. Dark
+  let darkTheme = document
+    .getElementById('dark-theme')
+    .addEventListener('click', () => {
+      document.body.style.backgroundColor = 'black';
+      document.body.style.color = 'white';
+      document.body.style.filter = 'grayscale(0%)';
+    });
+  // 2. Light
+  let lightTheme = document
+    .getElementById('light-theme')
+    .addEventListener('click', () => {
+      document.body.style.backgroundColor = 'beige';
+      document.body.style.filter = 'grayscale(0%)';
+      document.body.style.color = 'black';
+    });
+  // 3. Black and White
+  let blackAndWhite = document
+    .getElementById('black-white')
+    .addEventListener('click', () => {
+      document.body.style.filter = 'grayscale(100%)';
+    });
+  document.getElementById('dark-theme').addEventListener('click', () => {});
+  board.addEventListener('mousedown', () => (drawing = true));
+  board.addEventListener('mouseup', () => (drawing = false));
+  board.addEventListener('mouseleave', () => (drawing = false));
+
+  // Set Border Color of Board ========================
+  board.addEventListener('mouseenter', (e) => {
+    // On Entering
+    e.target.style.border = '2px solid blue';
+  });
+
+  board.addEventListener('mouseleave', (e) => {
+    // On leaving
+    e.target.style.border = '2px solid red';
+  });
+
+  // Get  Value  from slider and set to each element of .drawing
+
+  silder.addEventListener('change', (e) => {
+    // document.setAttribute();
+    document.querySelectorAll('.drawing').forEach((el) => {
+      brushSize = e.target.value;
+      el.style.width = `${brushSize}px`;
+      el.style.height = `${brushSize}px`;
+    });
+  });
+  // TODO: apply 'input'
+  // Get  color   from color selector  and set to each element of .drawing
+  colorPicker.addEventListener('input', (e) => {
+    brushColor = e.target.value;
+    document.querySelectorAll('.drawing').forEach((el) => {
+      el.style.backgroundColor = `${e.target.value}`;
+    });
+  });
+
+  board.addEventListener('mousemove', (e) => {
+    if (!drawing) return;
+
+    let newElement = document.createElement('div');
+    newElement.setAttribute('class', 'drawing');
+
+    let size = Number(silder.value);
+
+    newElement.style.width = `${size}px`;
+    newElement.style.height = `${size}px`;
+    newElement.style.backgroundColor = `${brushColor}`;
+
+    newElement.style.left = `${e.offsetX - size / 2}px`;
+    newElement.style.top = `${e.offsetY - size / 2}px`;
+
+    board.appendChild(newElement);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    console.log(e.key);
+    // Confirm
+    if (e.key === 'ArrowUp') {
+      // Worst Case
+      if (brushSize >= 50) return;
+      if (brushSize <= 50) {
+        brushSize += 1;
+      }
+      slider.value = brushSize;
+      document.querySelectorAll('.drawing').forEach((el) => {
+        el.style.width = `${brushSize}px`;
+        el.style.height = `${brushSize}px`;
+      });
+    } else if (e.key == 'ArrowDown') {
+      brushSize -= 1;
+      slider.value = brushSize;
+
+      document.querySelectorAll('.drawing').forEach((el) => {
+        el.style.width = `${brushSize}px`;
+        el.style.height = `${brushSize}px`;
+      });
+    }
+  });
+
+  document.getElementById('clear-board').addEventListener('click', () => {
+    board.innerHTML = '';
+  });
+</script>

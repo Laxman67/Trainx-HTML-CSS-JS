@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* Animation */
+        animation-name: pop-in-out;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        border: none;
+      }
+      @keyframes pop-in-out {
+        /* Step - step -step */
+
+        0% {
+          background-color: #ffffff;
+          margin-left: 0;
+        }
+        25% {
+          background-color: rgb(219, 22, 22);
+          margin-left: 150px;
+          margin-top: 0;
+          border-radius: 50%;
+        }
+
+        75% {
+          background-color: rgb(255, 247, 2);
+          margin-left: 150px;
+          margin-top: 200px;
+          border-radius: 40%;
+        }
+        100% {
+          background-color: rgb(231, 9, 176);
+          margin-left: 0px;
+          margin-top: 200px;
+          border-radius: 20%;
+        }
+
+        /* Initial to final */
+
+        /* from {
+          background-color: white;
+          margin-left: 0;
+        }
+        to {
+          background-color: black;
+          margin-left: 200px;
+          margin-top: 150px;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <button id="box"></button>
+  </body>
+</html>

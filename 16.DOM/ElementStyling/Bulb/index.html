@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="bulb" src="off-bulb.png" alt="" srcset="" width="180px" />
+    <button id="on-btn">ON</button>
+    <button id="off">OFF</button>
+  </body>
+  <script>
+    let bulbContainer = document.getElementById('bulb');
+    let on = document.getElementById('on-btn');
+    console.log(on);
+
+    let off = document.getElementById('off-btn');
+
+    on.addEventListener('click', () => {
+      bulbContainer.setAttribute('src', "on-bulb.png'");
+      console.log(bulbContainer);
+    });
+
+    off.addEventListener('click', () => {
+      bulbContainer.setAttribute('src', "off-bulb.png'");
+    });
+  </script>
+</html>

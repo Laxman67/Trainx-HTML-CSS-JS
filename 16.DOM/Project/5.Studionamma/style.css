@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.2s ease-in;
+}
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+.dark {
+  color: white !important;
+  background-color: black !important;
+}
+#nav-ribbon {
+  /* FIXME: Remove BG */
+  /* background-color: azure; */
+  background-color: transparent;
+  cursor:
+    url(https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68e3b2a062e7405c3602ab28_mickey-mouse-pointer-small.svg),
+    pointer;
+
+  /* FIXME: Z-index */
+  z-index: 11;
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  /* Flex  */
+  display: flex;
+  justify-content: space-between;
+  font-family: 'GT Pressura Mono';
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+#nav-ribbon-left,
+#nav-ribbon-right {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#top-section {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  /* FIXME: Remove After  */
+  /* background-color: red; */
+  background-color: #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Apply transitions */
+}
+
+#animated-character-box {
+  width: 40%;
+  height: auto;
+  padding: 10px;
+  /* FIXME: Remove After  */
+  /* background-color: green; */
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 150px;
+  font-weight: 900;
+  line-height: 120px;
+  text-align: center;
+}
+#mode {
+  /* cursor: pointer; */
+  width: 110px;
+  /* FIXME:  */
+  /* background-color: red; */
+}
+#menu,
+#contact {
+  transition: all 0.5s ease;
+}
+#menu {
+  width: 70px;
+  /* FIXME:  */
+  /* background-color: green; */
+}
+#animated-cursor-box {
+  /* FIXME: Z-index */
+  z-index: 100;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px 10px;
+  /* Position based on the cursor */
+  position: absolute;
+  transition: all linear 0.2s;
+
+  /* TODO: only for debug */
+  /* top: 10px;
+  left: 10px; */
+  opacity: 0;
+}
+#animated-cursor-box video {
+  width: 110%;
+}
+
+/* oVERLAYS */
+#overlay {
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  gap: 15rem;
+  font-family: 'Bebas Neue', sans-serif;
+  width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+  /* padding: 150px 3rem; */
+  /* position */
+  position: absolute;
+  background-color: white;
+  top: -100%;
+  /*FIXME:  OVERLAY: STEP 2*/
+  transition: all 0.3s ease;
+  cursor:
+    url(https://cdn.prod.website-files.com/679cb9cacf00799ba4b4c985/68e3b2a062e7405c3602ab28_mickey-mouse-pointer-small.svg),
+    pointer;
+  /* z-index: -1; */
+  /* FIXME: */
+  /* color: red; */
+  /* background-color: green; */
+  overflow: hidden;
+}
+.overlay-menus {
+  margin-left: 2rem;
+}
+.overlay-menus h3 {
+  font-size: 120px;
+  line-height: 80px;
+}
+
+.overlay-item {
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  /* TODO: Remove After All work fine */
+  /* background-color: red; */
+  gap: 12px;
+  margin: 20px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  /* TODO: Apply Translate Effect
+   */
+}
+.overlay-item h3 {
+  translate: -100% 100%;
+  transition: all 0.7s ease;
+}
+.overlay-item img {
+  width: 0px;
+  height: 120px;
+  margin-left: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+#follower {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: blue;
+  transition: all 0.5s ease;
+  position: absolute;
+  z-index: 100000;
+  /* To apply bg image */
+  /* background: url(assets/spidy.png); */
+  background-size: contain;
+}
+
+/* NOTE: PopOut Area */
+
+.popout-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 150px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e4e4e4;
+  /* FIXME: Remove After all set */
+  /* position: relative; */
+}
+.popout-area-head {
+  font-size: 1rem;
+  /* To capitalize the text */
+  text-transform: uppercase;
+  font-family: 'GT Pressura Mono Light';
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: 5rem;
+}
+.popout-area-content p {
+  font-size: 70px;
+  font-family: 'Changa One', sans-serif;
+  line-height: 80px;
+  word-spacing: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+.highlight {
+  text-decoration: underline;
+  position: relative;
+}
+.highlight img {
+  width: auto;
+  height: 220px;
+  object-fit: contain;
+
+  opacity: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(50px);
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+  border-radius: 5%;
+}
+.highlight img.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  animation: pop 1s ease;
+}
+.image-highlight {
+  border-radius: 5%;
+  transition: all 0.5s ease-in-out;
+  bottom: 0px;
+}
+
+/* Contact Overlay  */
+#contact-form-overlay {
+  /* display: flex; */
+  align-items: center;
+  padding: 4rem;
+  gap: 15rem;
+  font-family: 'Bebas Neue', sans-serif;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #c9c9c9;
+  overflow: hidden;
+}
+
+#contact-form-image-container img {
+  width: 0px;
+  height: auto;
+  border-radius: 10px;
+  width: 0px;
+  transition: all 1s ease-in-out;
+}
+#contact-form-overlay h1 {
+  font-size: 7rem;
+  line-height: 7rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+/* FORM INPUT FIELDS */
+
+form {
+  margin-top: 3rem;
+}
+.from-input-boxes {
+  display: flex;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 20px;
+}
+
+label {
+  font-family: 'Inter';
+  font-weight: 300;
+  text-transform: uppercase;
+}
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding-top: px;
+  margin-top: 0px;
+}
+input,
+::placeholder {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #b0abab;
+  width: 100%;
+  letter-spacing: -3px;
+  word-spacing: 6px;
+}
+
+input {
+  height: 45px;
+}
+
+.interest-options {
+  display: flex;
+  gap: 2rem;
+  color: #c9c9c9;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.interest-option-items {
+  display: flex;
+  gap: 1.6rem;
+  padding: 0px 10px;
+  background-color: #b0abab;
+  border-radius: 7px;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}

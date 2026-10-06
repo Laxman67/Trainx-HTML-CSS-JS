@@ -1,0 +1,14 @@
+Hi, I'm a Developer & Educator
+
+I am a passionate professional dedicated to building impactful web applications and sharing my knowledge with students around the world. Over the past few years, I have focused heavily on mastering modern technologies to solve complex, real-world problems.
+
+In my work, I always emphasize writing clean, maintainable code and focusing on user-centric design. Learning is a lifelong journey, and I make it a priority to stay updated with the latest industry standards and engineering best practices.
+
+My Core Skills & Focus Areas
+
+Frontend: Designing interactive user interfaces using modern structured components.
+Backend: Creating reliable, secure, and highly scalable server architectures.
+Mentorship: Helping aspiring engineers transition into technical roles through hands-on practice.
+Let's Connect
+
+You can explore my open-source projects directly on my GitHub Profile, or reach out to me via email fo
